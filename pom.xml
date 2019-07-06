@@ -4,6 +4,7 @@
 
 	<modules>
 		<module>learnHadoop</module>
+		<module>learnSpark</module>
 	</modules>
 
 	<parent>
