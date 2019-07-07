@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/learnLua/learnLua.iml" filepath="$PROJECT_DIR$/learnLua/learnLua.iml" />
+      <module fileurl="file://$PROJECT_DIR$/learnOpenresty/learnOpenresty.iml" filepath="$PROJECT_DIR$/learnOpenresty/learnOpenresty.iml" />
     </modules>
   </component>
 </project>
