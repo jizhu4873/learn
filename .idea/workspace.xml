@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6819f0bc-bac6-4c80-b646-a79c79db42fb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/learnOpenresty/conf/lua.conf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/learnOpenresty/conf/nginx.conf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/learnOpenresty/learnOpenresty.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/learnSpark/src/main/java/com/haanoo/wordcount/JavaWordCount.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/learnSpark/src/main/java/com/haanoo/wordcount/LambdaWordCount.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/learnSpark/src/main/scala/com/haanoo/wordcount/WordCountRunByLocalMode.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/learnLua/src/HelloLua.lua" beforeDir="false" afterPath="$PROJECT_DIR$/learnLua/src/HelloLua.lua" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -25,24 +23,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/learnLua/src/HelloLua.lua">
+        <entry file="file://$PROJECT_DIR$/learnSpark/src/main/java/com/haanoo/wordcount/LambdaWordCount.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
+            <state relative-caret-position="360">
+              <caret line="22" column="12" lean-forward="true" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/learnOpenresty/conf/lua.conf">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/learnOpenresty/conf/nginx.conf">
+        <entry file="file://$PROJECT_DIR$/learnSpark/src/main/scala/com/haanoo/wordcount/WordCountRunByLocalMode.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3162">
-              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+            <state relative-caret-position="330">
+              <caret line="12" column="49" lean-forward="true" selection-start-line="12" selection-start-column="49" selection-end-line="12" selection-end-column="49" />
             </state>
           </provider>
         </entry>
@@ -53,8 +46,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Scala Object" />
-        <option value="Class" />
         <option value="NewLua" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -72,6 +65,9 @@
         <option value="$PROJECT_DIR$/learnSpark/pom.xml" />
         <option value="$PROJECT_DIR$/learnSpark/src/main/scala/com/haanoo/wordcount/ScalaWordCount.scala" />
         <option value="$PROJECT_DIR$/learnLua/src/HelloLua.lua" />
+        <option value="$PROJECT_DIR$/learnSpark/src/main/java/com/haanoo/wordcount/JavaWordCount.java" />
+        <option value="$PROJECT_DIR$/learnSpark/src/main/java/com/haanoo/wordcount/LambdaWordCount.java" />
+        <option value="$PROJECT_DIR$/learnSpark/src/main/scala/com/haanoo/wordcount/WordCountRunByLocalMode.scala" />
       </list>
     </option>
   </component>
@@ -113,8 +109,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -125,18 +119,58 @@
             <path>
               <item name="learn" type="b2602c69:ProjectViewProjectNode" />
               <item name="learn" type="462c0819:PsiDirectoryNode" />
-              <item name="learnOpenresty" type="462c0819:PsiDirectoryNode" />
+              <item name="learnSpark" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="learn" type="b2602c69:ProjectViewProjectNode" />
               <item name="learn" type="462c0819:PsiDirectoryNode" />
-              <item name="learnOpenresty" type="462c0819:PsiDirectoryNode" />
-              <item name="conf" type="462c0819:PsiDirectoryNode" />
+              <item name="learnSpark" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="learn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="learn" type="462c0819:PsiDirectoryNode" />
+              <item name="learnSpark" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="learn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="learn" type="462c0819:PsiDirectoryNode" />
+              <item name="learnSpark" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="learn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="learn" type="462c0819:PsiDirectoryNode" />
+              <item name="learnSpark" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="scala" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="learn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="learn" type="462c0819:PsiDirectoryNode" />
+              <item name="learnSpark" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="scala" type="462c0819:PsiDirectoryNode" />
+              <item name="wordcount" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="learn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="learn" type="462c0819:PsiDirectoryNode" />
+              <item name="learnSpark" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -154,6 +188,9 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.haanoo.wordcount" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\project\idea\learn\learnOpenresty\conf" />
       <recent name="F:\project\idea\learn\learnSpark" />
@@ -172,13 +209,27 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Lua Application.HelloLua.lua">
+  <component name="RunManager" selected="Application.WordCountRunByLocalMode">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.haanoo.App" />
       <module name="learnHadoop" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.haanoo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WordCountRunByLocalMode" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="com.haanoo.wordcount.WordCountRunByLocalMode" />
+      <module name="learnSpark" />
+      <option name="PROGRAM_PARAMETERS" value="C:\Users\Administrator\Desktop\1\words.txt C:\Users\Administrator\Desktop\sparkWordcountByLocalMode.txt" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.haanoo.wordcount.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -225,6 +276,7 @@
     </configuration>
     <list>
       <item itemvalue="Application.App" />
+      <item itemvalue="Application.WordCountRunByLocalMode" />
       <item itemvalue="JUnit.HdfsTest.testMove" />
       <item itemvalue="JUnit.HdfsTest.testUpload" />
       <item itemvalue="Lua Application.HelloLua.lua" />
@@ -232,6 +284,7 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.WordCountRunByLocalMode" />
         <item itemvalue="Lua Application.HelloLua.lua" />
         <item itemvalue="Application.App" />
         <item itemvalue="JUnit.HdfsTest.testMove" />
@@ -260,7 +313,8 @@
       <workItem from="1562424388808" duration="1090000" />
       <workItem from="1562425531061" duration="135000" />
       <workItem from="1562425709571" duration="236000" />
-      <workItem from="1562490205306" duration="1245000" />
+      <workItem from="1562490205306" duration="3531000" />
+      <workItem from="1562495998179" duration="3768000" />
     </task>
     <task id="LOCAL-00001" summary="添加spark的wordcount">
       <created>1562417580881</created>
@@ -283,7 +337,14 @@
       <option name="project" value="LOCAL" />
       <updated>1562425826378</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="添加openResty学习模块">
+      <created>1562491715674</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1562491715674</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -319,13 +380,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18321000" />
+    <option name="totallyTimeSpent" value="24375000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1928" height="1036" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30516684" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.31001076" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Capture Tool" order="3" />
@@ -334,7 +395,7 @@
       <window_info id="Image Layers" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.4097222" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.4097222" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39930555" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -369,7 +430,8 @@
     <MESSAGE value="添加spark的wordcount" />
     <MESSAGE value="重新整理模块与工程的关系" />
     <MESSAGE value="添加lua学习模块" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加lua学习模块" />
+    <MESSAGE value="添加openResty学习模块" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加openResty学习模块" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/learnHadoop/src/test/java/com/haanoo/AppTest.java">
@@ -466,20 +528,75 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/learnLua/src/HelloLua.lua">
+    <entry file="file://$PROJECT_DIR$/learnOpenresty/conf/nginx.conf">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
+        <state relative-caret-position="258">
+          <caret line="117" lean-forward="true" selection-start-line="117" selection-end-line="117" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/learnOpenresty/conf/lua.conf">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/learnOpenresty/conf/nginx.conf">
+    <entry file="file://$PROJECT_DIR$/learnLua/src/HelloLua.lua">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3162">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        <state relative-caret-position="180">
+          <caret line="6" column="10" lean-forward="true" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://F:/mvn/repo/repo_b2c/osgi-repository(2)/org/apache/spark/spark-core_2.11/2.2.0/spark-core_2.11-2.2.0.jar!/org/apache/spark/api/java/JavaRDDLike.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="17" column="65" selection-start-line="17" selection-start-column="65" selection-end-line="17" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://F:/mvn/repo/repo_b2c/osgi-repository(2)/org/apache/spark/spark-core_2.11/2.2.0/spark-core_2.11-2.2.0.jar!/org/apache/spark/api/java/function/FlatMapFunction.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://F:/mvn/repo/repo_b2c/osgi-repository(2)/org/apache/spark/spark-core_2.11/2.2.0/spark-core_2.11-2.2.0-sources.jar!/org/apache/spark/api/java/JavaRDDLike.scala">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar://F:/mvn/repo/repo_b2c/osgi-repository(2)/org/apache/spark/spark-core_2.11/2.2.0/spark-core_2.11-2.2.0-sources.jar!/org/apache/spark/api/java/function/FlatMapFunction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="23" column="3" selection-start-line="23" selection-start-column="3" selection-end-line="23" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://F:/mvn/repo/repo_b2c/osgi-repository(2)/org/apache/spark/spark-core_2.11/2.2.0/spark-core_2.11-2.2.0-sources.jar!/org/apache/spark/api/java/JavaPairRDD.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="892" column="14" lean-forward="true" selection-start-line="892" selection-start-column="14" selection-end-line="892" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/learnSpark/src/main/java/com/haanoo/wordcount/JavaWordCount.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="16" column="34" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/learnSpark/src/main/java/com/haanoo/wordcount/LambdaWordCount.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="22" column="12" lean-forward="true" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/learnSpark/src/main/scala/com/haanoo/wordcount/WordCountRunByLocalMode.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="12" column="49" lean-forward="true" selection-start-line="12" selection-start-column="49" selection-end-line="12" selection-end-column="49" />
         </state>
       </provider>
     </entry>
