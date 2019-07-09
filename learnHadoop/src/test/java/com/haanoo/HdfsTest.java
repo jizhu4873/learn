@@ -5,6 +5,7 @@ import org.apache.hadoop.fs.FileSystem;
 import org.apache.hadoop.fs.Path;
 import org.junit.Test;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.URI;
 
@@ -25,6 +26,7 @@ public class HdfsTest {
         FileSystem fs = FileSystem.get(URI.create("hdfs://eeye-test:9000/"), conf,"root");
         fs.copyFromLocalFile(new Path("C:\\Users\\Administrator\\Desktop\\1.md"),new Path("/"));
         fs.rename(new Path("/1.md"),new Path("/diaryOfEeye.md"));
+
         fs.close();
     }
 }

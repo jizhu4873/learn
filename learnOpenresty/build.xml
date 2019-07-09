@@ -4,12 +4,11 @@
     <description>
         run Openresty
     </description>
-    <!-- set global properties for this build -->
-    <property name="openresty-home" location="D:\dev_software\openresty-1.13.6.2-win64"/>
+    <property name="openresty-home" location="D:\app\openresty-1.13.6.2-win64"/>
     <property name="conf" location="${basedir}/conf"/>
     <property name="src" location="${basedir}/src"/>
     <property name="target-conf" location="${openresty-home}/conf"/>
-    <property name="target-src" location="${openresty-home}/${ant.project.name}"/>
+    <property name="target-src" location="${openresty-home}/my-lua"/>
 
     <target name="clean" depends="">
         <echo>清理openresty目录 ${dist}下的conf,logs,janus,januslib</echo>
