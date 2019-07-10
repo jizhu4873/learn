@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+  [v-cloak]{
+    display: none;
+  }
+</style>
+<body>
+<div id="app">
+ <p v-cloak>{{msg}}</p>
+  <div v-html="h1_msg"></div>
+
+  <input type="button" :value="btnVal + '吧'" @click="alert(1)"/>
+</div>
+<script src="js/vue.min.js"></script>
+<script>
+  var vm = new Vue({
+    el:"#app",
+    data:{
+      msg:"world",
+      h1_msg:"<h1>hello</h1>",
+      btnVal:"点击我"
+    }
+  });
+
+</script>
+</body>
+</html>
