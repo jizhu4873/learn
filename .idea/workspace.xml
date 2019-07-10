@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6819f0bc-bac6-4c80-b646-a79c79db42fb" name="Default Changelist" comment="openresty配置build.xml的ant脚本">
-      <change afterPath="$PROJECT_DIR$/.idea/ant.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/learnOpenresty/src/hello.lua" afterDir="false" />
+    <list default="true" id="6819f0bc-bac6-4c80-b646-a79c79db42fb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/learnHadoop/src/test/java/com/haanoo/HdfsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/learnHadoop/src/test/java/com/haanoo/HdfsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/learnOpenresty/build.xml" beforeDir="false" afterPath="$PROJECT_DIR$/learnOpenresty/build.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/learnOpenresty/conf/lua.conf" beforeDir="false" afterPath="$PROJECT_DIR$/learnOpenresty/conf/lua.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/learnOpenresty/conf/nginx.conf" beforeDir="false" afterPath="$PROJECT_DIR$/learnOpenresty/conf/nginx.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learnOpenresty/src/hello.lua" beforeDir="false" afterPath="$PROJECT_DIR$/learnOpenresty/src/hello.lua" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -31,37 +27,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/learnOpenresty/conf/nginx.conf">
+        <entry file="file://$PROJECT_DIR$/learnOpenresty/conf/lua.conf">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="41" column="31" lean-forward="true" selection-start-line="39" selection-start-column="4" selection-end-line="41" selection-end-column="31" />
+            <state relative-caret-position="54">
+              <caret line="2" column="9" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/learnOpenresty/conf/lua.conf">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="2" column="30" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/learnOpenresty/build.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="513">
-              <caret line="19" column="34" lean-forward="true" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/learnOpenresty/src/hello.lua">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="22" lean-forward="true" selection-start-column="22" selection-end-column="22" />
+            <state relative-caret-position="221">
+              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
             </state>
           </provider>
         </entry>
@@ -100,9 +78,9 @@
         <option value="$PROJECT_DIR$/learnSpark/src/main/scala/com/haanoo/wordcount/WordCountRunByLocalMode.scala" />
         <option value="$PROJECT_DIR$/learnHadoop/src/test/java/com/haanoo/HdfsTest.java" />
         <option value="$PROJECT_DIR$/learnOpenresty/build.xml" />
-        <option value="$PROJECT_DIR$/learnOpenresty/src/hello.lua" />
         <option value="$PROJECT_DIR$/learnOpenresty/conf/nginx.conf" />
         <option value="$PROJECT_DIR$/learnOpenresty/conf/lua.conf" />
+        <option value="$PROJECT_DIR$/learnOpenresty/src/hello.lua" />
       </list>
     </option>
   </component>
@@ -148,7 +126,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -161,23 +138,12 @@
               <item name="learn" type="462c0819:PsiDirectoryNode" />
               <item name="learnOpenresty" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="learn" type="b2602c69:ProjectViewProjectNode" />
-              <item name="learn" type="462c0819:PsiDirectoryNode" />
-              <item name="learnOpenresty" type="462c0819:PsiDirectoryNode" />
-              <item name="conf" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="learn" type="b2602c69:ProjectViewProjectNode" />
-              <item name="learn" type="462c0819:PsiDirectoryNode" />
-              <item name="learnOpenresty" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -362,7 +328,8 @@
       <workItem from="1562570597585" duration="2855000" />
       <workItem from="1562573616224" duration="174000" />
       <workItem from="1562573823203" duration="3650000" />
-      <workItem from="1562658857536" duration="3589000" />
+      <workItem from="1562658857536" duration="4481000" />
+      <workItem from="1562719797864" duration="2613000" />
     </task>
     <task id="LOCAL-00001" summary="添加spark的wordcount">
       <created>1562417580881</created>
@@ -406,7 +373,14 @@
       <option name="project" value="LOCAL" />
       <updated>1562574767785</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="让openresty在idea环境下跑起来">
+      <created>1562662609147</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1562662609147</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -442,13 +416,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35451000" />
+    <option name="totallyTimeSpent" value="38956000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1608" height="856" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18292683" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18485238" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Capture Tool" order="3" />
@@ -495,12 +469,18 @@
     <MESSAGE value="添加openResty学习模块" />
     <MESSAGE value="vue" />
     <MESSAGE value="openresty配置build.xml的ant脚本" />
-    <option name="LAST_COMMIT_MESSAGE" value="openresty配置build.xml的ant脚本" />
+    <MESSAGE value="让openresty在idea环境下跑起来" />
+    <option name="LAST_COMMIT_MESSAGE" value="让openresty在idea环境下跑起来" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
     <buildFile url="file://$PROJECT_DIR$/learnOpenresty/build.xml">
+      <targetFilters>
+        <filter targetName="clean" isVisible="false" />
+        <filter targetName="init" isVisible="false" />
+        <filter targetName="copy" isVisible="true" />
+      </targetFilters>
       <expanded value="true" />
     </buildFile>
   </component>
@@ -672,29 +652,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/learnOpenresty/build.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="19" column="34" lean-forward="true" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/learnOpenresty/src/hello.lua">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="22" lean-forward="true" selection-start-column="22" selection-end-column="22" />
+        <state relative-caret-position="405">
+          <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/learnOpenresty/conf/nginx.conf">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="41" column="31" lean-forward="true" selection-start-line="39" selection-start-column="4" selection-end-line="41" selection-end-column="31" />
+        <state relative-caret-position="216">
+          <caret line="43" column="22" selection-start-line="43" selection-start-column="22" selection-end-line="43" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/learnOpenresty/conf/lua.conf">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
-          <caret line="2" column="30" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
+          <caret line="2" column="9" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/learnOpenresty/src/hello.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
         </state>
       </provider>
     </entry>
