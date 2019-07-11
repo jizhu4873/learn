@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+  [v-cloak]{
+    display: none;
+  }
+</style>
+<body>
+<div id="app">
+ <p v-cloak>{{msg}}</p>
+
+  <input type="button" value="GO" @click="running()"/>
+  <input type="button" value="STOP" @click="stop()"/>
+</div>
+<script src="js/vue.min.js"></script>
+<script>
+  var vm = new Vue({
+    el:"#app",
+    data:{
+      msg:"welcome to vue learning!!!",
+      interval:null
+    },
+    methods:{
+      running(){
+        if(this.interval!=null) return;
+        this.interval = setInterval(()=>{
+          var start = this.msg.substr(0,1);
+          var substr = this.msg.substr(1);
+          this.msg = substr + start;
+        },500);
+      },
+      stop(){
+        clearInterval(this.interval)
+        this.interval = null;
+      }
+    }
+  });
+
+</script>
+</body>
+</html>
