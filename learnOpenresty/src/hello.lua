@@ -1,3 +1,4 @@
+ngx.say("<br/>----------------dev begin----------------<br/> ")
 local var = ngx.var
 ngx.say("first parameter is ",var.firstParam,"</br>")
 ngx.say("second parameter is ",var.secondParam,"</br>")
@@ -26,4 +27,12 @@ for k,v in pairs(uriArgs) do
     end
 end
 
-ngx.say("<br/><br/><br/>----------------uri args end----------------<br/>")
+ngx.say("<br/><br/><br/>----------------others api for nginx ----------------<br/>")
+ngx.say("http version ",ngx.req.http_version(),"<br/>")
+ngx.say("http method ",ngx.req.get_method(),"<br/>")
+ngx.say("raw headers ",ngx.req.raw_header(),"<br/>")
+
+-- 必须提前读取，否则下面的get_body_data将无返回值
+ngx.req.read_body()
+ngx.say("body data ",ngx.req.get_body_data(),"<br/>")
+
