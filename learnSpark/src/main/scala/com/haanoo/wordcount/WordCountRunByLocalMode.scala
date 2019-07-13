@@ -15,6 +15,10 @@ object WordCountRunByLocalMode {
     var wordToNums:RDD[(String,Int)] = wordToOne.reduceByKey(_+_)
     var sorts:RDD[(String,Int)] = wordToNums.sortBy(_._1)
     sorts.saveAsTextFile(args(1))
+
+    var func = (index:Int,it:Iterator[Int]) =>{
+      it.map(ele=>s"index:$index , element:$ele")
+    }
     sc.stop();
   }
 
