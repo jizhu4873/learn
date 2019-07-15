@@ -2,4 +2,5 @@
 -- ngx.header.username="test"
 -- ngx.header.multiVal={"val1","val2"}
 
-ngx.say("a", "b", "<br/>")
+-- 获取nginx的内置变量
+ngx.say(ngx.var.server_port)
