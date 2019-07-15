@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+   .red {
+     color: red;
+   }
+
+  .thin {
+    font-weight: 200;
+  }
+
+  .italic {
+    font-style: italic;
+  }
+
+  .active {
+    letter-spacing: 0.5em;
+  }
+</style>
+<body>
+<div id="app">
+  <h1 :class="[redFlag?'red':'','italic']">hello H1</h1>
+
+  <br/>
+
+  <h1 :class="[{'red':redFlag},'italic','active']">hello H1</h1>
+
+  <br/>
+
+  <h1 :class="{'red':redFlag , italic:redFlag}">hello H1</h1>
+
+  <br/>
+
+  <h1 :class="cls">hello H1</h1>
+
+  <br/>
+
+  <h1 :style="stl">hello H1</h1>
+
+</div>
+<script src="js/vue.min.js"></script>
+<script>
+  var vm = new Vue({
+    el:"#app",
+    data:{
+        redFlag:true,
+        cls:{red:true,active:true},
+        stl:{'color': 'red','font-style':'italic'}
+    }
+  });
+
+</script>
+</body>
+</html>
