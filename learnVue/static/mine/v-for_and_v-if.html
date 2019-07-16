@@ -19,10 +19,16 @@
       <input type="text" v-model="name">
     </label>
     <input type="button" value="add" @click="add()">
+    <input type="button" value="toggle" @click="show = !show">
   </div>
   <div v-for="item in heros" :key="item.id">
     <input type="checkbox">{{ item.id }}--{{ item.name }}
   </div>
+
+  <br/>
+  <p v-if="show">v-if show</p>
+  <p v-show="show">v-show show</p>
+
 </div>
 
 <script src="js/vue.min.js"></script>
@@ -36,11 +42,15 @@
         {id:1,name:"宋江"},
         {id:2,name:"卢俊义"},
         {id:3,name:"吴用"}
-      ]
+      ],
+      show:true
     },
     methods:{
       add(){
         this.heros.push({id:this.id,name:this.name})
+      },
+      toggle(){
+
       }
     }
   });

@@ -4,3 +4,6 @@
 
 -- 获取nginx的内置变量
 ngx.say(ngx.var.server_port)
+
+local a = 1;
+print(a)
