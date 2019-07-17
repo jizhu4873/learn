@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>template</title>
+  <link rel="stylesheet" href="css/bootstrap-3.3.7.css">
+</head>
+<style>
+  [v-cloak]{
+    display: none;
+  }
+</style>
+<body>
+<div id="app">
+  <table class="table table-bordered table-hover table-striped">
+    <thead>
+      <tr>
+        <th>id</th>
+        <th>name</th>
+        <th>creatTime</th>
+        <th>op</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr v-for="o in list" :key="o.id">
+        <td>{{o.id}}</td>
+        <td>{{o.name}}</td>
+        <td>{{o.creatTime}}</td>
+        <td><a href="">删除</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<script src="js/vue.min.js"></script>
+<script>
+  var vm = new Vue({
+    el:"#app",
+    data:{
+      list:[
+        {id:1,name:"大奔",creatTime:new Date()},
+        {id:2,name:"宝马",creatTime:new Date()},
+      ]
+    },
+    methods:{
+
+    }
+  });
+
+</script>
+</body>
+</html>
