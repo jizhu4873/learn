@@ -12,6 +12,26 @@
 </style>
 <body>
 <div id="app">
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h3 class="panel-title">添加品牌</h3>
+    </div>
+      <div class="form-group">
+        <label for="" class="col-sm-1 control-label">id</label>
+        <div class="col-sm-2">
+          <input type="text" class="form-control" placeholder="" v-model="id">
+        </div>
+
+          <label for="" class="col-sm-1 control-label">name</label>
+          <div class="col-sm-5">
+            <input type="text" class="form-control" placeholder="" v-model="name">
+          </div>
+
+          <button type="button" class="btn btn-primary" @click="add">add</button>
+
+      </div>
+
+  </div>
   <table class="table table-bordered table-hover table-striped">
     <thead>
       <tr>
@@ -37,13 +57,19 @@
   var vm = new Vue({
     el:"#app",
     data:{
+      id:"",
+      name:"",
       list:[
         {id:1,name:"大奔",creatTime:new Date()},
         {id:2,name:"宝马",creatTime:new Date()},
       ]
     },
     methods:{
-
+      add(){
+        var car = {id:this.id,name:this.name,creatTime:new Date()}
+        this.list.push(car)
+        this.name=this.id=""
+      }
     }
   });
 
