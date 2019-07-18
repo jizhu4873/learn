@@ -46,7 +46,7 @@
         <td>{{o.id}}</td>
         <td>{{o.name}}</td>
         <td>{{o.creatTime}}</td>
-        <td><a href="">删除</a></td>
+        <td><a href="" @click.prevent="del(o.id)">删除</a></td>
       </tr>
     </tbody>
   </table>
@@ -69,6 +69,14 @@
         var car = {id:this.id,name:this.name,creatTime:new Date()}
         this.list.push(car)
         this.name=this.id=""
+      },
+      del(id){
+        this.list.some((item,idx)=>{
+          if(id == item.id){
+            this.list.splice(idx,1);
+            return true;
+          }
+        })
       }
     }
   });
