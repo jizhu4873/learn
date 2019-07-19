@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6819f0bc-bac6-4c80-b646-a79c79db42fb" name="Default Changelist" comment="vue学习-vue样式属性的绑定">
-      <change afterPath="$PROJECT_DIR$/learnVue/static/mine/css/bootstrap-3.3.7.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/learnVue/static/mine/products-with-search.html" afterDir="false" />
+    <list default="true" id="6819f0bc-bac6-4c80-b646-a79c79db42fb" name="Default Changelist" comment="vue学习-bootstrap插件实现快捷操作">
+      <change afterPath="$PROJECT_DIR$/learnJava/src/test/java/com/haanoo/BoolLogicalCalc.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/learnVue/static/mine/js/vue-2.4.0.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/learnJava/learnJava.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/learnJava/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/learnJava/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learnVue/build/build.js" beforeDir="false" afterPath="$PROJECT_DIR$/learnVue/build/build.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learnVue/config/prod.env.js" beforeDir="false" afterPath="$PROJECT_DIR$/learnVue/config/prod.env.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learnVue/static/mine/products-with-search.html" beforeDir="false" afterPath="$PROJECT_DIR$/learnVue/static/mine/products-with-search.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -27,12 +31,12 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/learnVue/static/mine/products-with-search.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="39" column="12" lean-forward="true" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="12" />
+            <state relative-caret-position="226">
+              <caret line="57" column="25" selection-start-line="57" selection-start-column="25" selection-end-line="57" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -43,6 +47,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Scala Object" />
+        <option value="HTML File" />
         <option value="NewLua" />
         <option value="Class" />
       </list>
@@ -50,10 +55,17 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>td</find>
+      <find>basedir</find>
+      <find>_this</find>
+      <find>var</find>
+      <find />
+      <find>NODE_ENV</find>
+      <find>keyWord</find>
     </findStrings>
     <replaceStrings>
-      <replace>th</replace>
+      <replace>this</replace>
+      <replace />
+      <replace>keywords</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -63,7 +75,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/learnHadoop/pom.xml" />
-        <option value="$PROJECT_DIR$/learnHadoop/src/test/java/com/haanoo/HdfsTest.java" />
         <option value="$PROJECT_DIR$/learnSpark/src/main/scala/com.haanoo.WordCount/ScalaWordCount.scala" />
         <option value="$PROJECT_DIR$/learnHadoop/src/main/java/com/haanoo/web/TestController.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
@@ -73,11 +84,25 @@
         <option value="$PROJECT_DIR$/learnSpark/src/main/java/com/haanoo/wordcount/JavaWordCount.java" />
         <option value="$PROJECT_DIR$/learnSpark/src/main/java/com/haanoo/wordcount/LambdaWordCount.java" />
         <option value="$PROJECT_DIR$/learnSpark/src/main/scala/com/haanoo/wordcount/WordCountRunByLocalMode.scala" />
-        <option value="$PROJECT_DIR$/learnVue/static/mine/vue-class.html" />
-        <option value="$PROJECT_DIR$/learnVue/static/mine/v-for_and_v-if.html" />
+        <option value="$PROJECT_DIR$/learnHadoop/src/test/java/com/haanoo/HdfsTest.java" />
+        <option value="$PROJECT_DIR$/learnOpenresty/build.xml" />
+        <option value="$PROJECT_DIR$/learnVue/static/mine/v-directive.html" />
+        <option value="$PROJECT_DIR$/learnVue/static/mine/horseRaceLamp.html" />
+        <option value="$PROJECT_DIR$/learnOpenresty/src/hello.lua" />
+        <option value="$PROJECT_DIR$/learnVue/static/mine/template.html" />
+        <option value="$PROJECT_DIR$/learnVue/static/mine/v-for.html" />
+        <option value="$PROJECT_DIR$/learnOpenresty/src/test-response.lua" />
+        <option value="$PROJECT_DIR$/learnJava/src/main/java/com/haanoo/RefFunctionDemo.java" />
+        <option value="$PROJECT_DIR$/learnJava/src/main/java/com/haanoo/RefConstructorDemo.java" />
+        <option value="$PROJECT_DIR$/learnJava/pom.xml" />
+        <option value="$PROJECT_DIR$/learnJava/src/main/java/com/haanoo/lambda/RefConstructorDemo.java" />
+        <option value="$PROJECT_DIR$/learnJava/src/main/java/com/haanoo/lambda/SteamDemo.java" />
+        <option value="$PROJECT_DIR$/learnOpenresty/src/response.lua" />
         <option value="$PROJECT_DIR$/learnOpenresty/conf/nginx.conf" />
         <option value="$PROJECT_DIR$/learnOpenresty/conf/lua.conf" />
-        <option value="$PROJECT_DIR$/learnOpenresty/src/response.lua" />
+        <option value="$PROJECT_DIR$/learnJava/src/test/java/com/haanoo/BoolLogicalCalc.java" />
+        <option value="$PROJECT_DIR$/learnVue/config/prod.env.js" />
+        <option value="$PROJECT_DIR$/learnVue/build/build.js" />
         <option value="$PROJECT_DIR$/learnVue/static/mine/products-with-search.html" />
       </list>
     </option>
@@ -85,8 +110,8 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="D:/java/apache-maven-3.6.1" />
-        <option name="userSettingsFile" value="D:\java\apache-maven-3.6.1\conf\settings.xml" />
+        <option name="mavenHome" value="E:/mvn/apache-maven-3.5.3" />
+        <option name="userSettingsFile" value="E:\mvn\apache-maven-3.5.3\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
   </component>
@@ -95,12 +120,7 @@
       <expand>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="learnSpark" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="learnSpark" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+          <item name="learnJava" type="9519ce18:MavenProjectsStructure$ProjectNode" />
         </path>
       </expand>
       <select />
@@ -118,13 +138,14 @@
     <option name="width" value="1400" />
     <option name="height" value="808" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -150,6 +171,14 @@
               <item name="static" type="462c0819:PsiDirectoryNode" />
               <item name="mine" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="learn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="learn" type="462c0819:PsiDirectoryNode" />
+              <item name="learnVue" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="mine" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -157,30 +186,40 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="editor.config.ad.shown" value="true" />
     <property name="jdk.selected.LUA_MODULE" value="5.1" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/learnVue/static/mine" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/learnJava/src/main/java/com/haanoo" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/learnVue/static/mine/js" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.web.browsers" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.haanoo" />
       <recent name="com.haanoo.wordcount" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\project\idea\learn\learnVue\static\mine" />
-      <recent name="F:\project\idea\learn\learnVue\static\mine\css" />
+      <recent name="E:\git\learn\learnVue\static\mine\js" />
+      <recent name="E:\git\learn\learnOpenresty\conf" />
+      <recent name="E:\git\learn\learnVue\static\mine" />
       <recent name="F:\project\idea\learn\learnOpenresty\conf" />
       <recent name="F:\project\idea\learn\learnSpark" />
-      <recent name="F:\project\idea\learn\learnSpark\src\main\scala" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -195,39 +234,33 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Lua Application.response.lua">
-    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.haanoo.App" />
-      <module name="learnHadoop" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.haanoo.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+  <component name="RunManager" selected="JUnit.BoolLogicalCalc.testBoolLogicalCalc">
+    <configuration name="RefConstructorDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.haanoo.lambda.RefConstructorDemo" />
+      <module name="learnJava" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WordCountRunByLocalMode" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="com.haanoo.wordcount.WordCountRunByLocalMode" />
-      <module name="learnSpark" />
-      <option name="PROGRAM_PARAMETERS" value="C:\Users\Administrator\Desktop\1\words.txt C:\Users\Administrator\Desktop\sparkWordcountByLocalMode.txt" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.haanoo.wordcount.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+    <configuration name="RefFunctionDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.haanoo.lambda.RefFunctionDemo" />
+      <module name="learnJava" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HdfsTest.testMove" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="learnHadoop" />
+    <configuration name="SteamDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.haanoo.lambda.SteamDemo" />
+      <module name="learnJava" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BoolLogicalCalc.testBoolLogicalCalc" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="learnJava" />
       <option name="PACKAGE_NAME" value="com.haanoo" />
-      <option name="MAIN_CLASS_NAME" value="com.haanoo.HdfsTest" />
-      <option name="METHOD_NAME" value="testMove" />
+      <option name="MAIN_CLASS_NAME" value="com.haanoo.BoolLogicalCalc" />
+      <option name="METHOD_NAME" value="testBoolLogicalCalc" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -240,6 +273,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/learnVue/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="dev" type="js.build_tools.npm" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/learnVue/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="HelloLua.lua" type="lua.app" factoryName="Lua Application" temporary="true">
       <option name="program" value="C:\Program Files (x86)\Lua\5.1\lua.exe" />
       <option name="file" value="HelloLua.lua" />
@@ -250,40 +303,31 @@
       <option name="showConsole" value="true" />
       <method v="2" />
     </configuration>
-    <configuration name="response.lua" type="lua.app" factoryName="Lua Application" temporary="true">
-      <option name="program" value="lua.exe" />
-      <option name="file" value="$PROJECT_DIR$/learnOpenresty/src/response.lua" />
-      <option name="workingDir" value="$PROJECT_DIR$/learnLua/src" />
-      <option name="debuggerType" value="1" />
-      <option name="params" value="" />
-      <option name="charset" value="UTF-8" />
-      <option name="showConsole" value="true" />
-      <method v="2" />
-    </configuration>
     <configuration name="openresty" type="nginx.configuration.type" factoryName="nginx server">
-      <option name="serverDescriptorId" value="nginx.descriptor.1563286219810" />
+      <option name="serverDescriptorId" value="nginx.descriptor.1562574083725" />
       <option name="showHttpLog" value="true" />
       <option name="showErrorLog" value="true" />
-      <option name="httpLogPath" value="D:\app\openresty\logs\access.log" />
-      <option name="errorLogPath" value="D:\app\openresty\logs\error.log" />
+      <option name="httpLogPath" value="D:\app\openresty-1.13.6.2-win64\logs\access.log" />
+      <option name="errorLogPath" value="D:\app\openresty-1.13.6.2-win64\logs\error.log" />
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Application.App" />
-      <item itemvalue="Application.WordCountRunByLocalMode" />
-      <item itemvalue="JUnit.HdfsTest.testMove" />
+      <item itemvalue="Application.RefFunctionDemo" />
+      <item itemvalue="Application.RefConstructorDemo" />
+      <item itemvalue="Application.SteamDemo" />
+      <item itemvalue="JUnit.BoolLogicalCalc.testBoolLogicalCalc" />
       <item itemvalue="Lua Application.HelloLua.lua" />
-      <item itemvalue="Lua Application.response.lua" />
       <item itemvalue="nginx server.openresty" />
+      <item itemvalue="npm.dev" />
       <item itemvalue="Spring Boot.SampleSimpleApplication" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Lua Application.response.lua" />
-        <item itemvalue="Application.WordCountRunByLocalMode" />
+        <item itemvalue="JUnit.BoolLogicalCalc.testBoolLogicalCalc" />
+        <item itemvalue="Application.SteamDemo" />
+        <item itemvalue="Application.RefConstructorDemo" />
+        <item itemvalue="Application.RefFunctionDemo" />
         <item itemvalue="Lua Application.HelloLua.lua" />
-        <item itemvalue="Application.App" />
-        <item itemvalue="JUnit.HdfsTest.testMove" />
       </list>
     </recent_temporary>
   </component>
@@ -309,16 +353,26 @@
       <workItem from="1562425531061" duration="135000" />
       <workItem from="1562425709571" duration="236000" />
       <workItem from="1562490205306" duration="3531000" />
-      <workItem from="1562495998179" duration="4528000" />
-      <workItem from="1562586869943" duration="975000" />
-      <workItem from="1562587901508" duration="1677000" />
-      <workItem from="1562677751327" duration="1205000" />
-      <workItem from="1562765091119" duration="599000" />
-      <workItem from="1562941551009" duration="881000" />
-      <workItem from="1563004900894" duration="3208000" />
-      <workItem from="1563199938890" duration="187000" />
-      <workItem from="1563284595381" duration="2149000" />
-      <workItem from="1563371751254" duration="271000" />
+      <workItem from="1562495998179" duration="3768000" />
+      <workItem from="1562570597585" duration="2855000" />
+      <workItem from="1562573616224" duration="174000" />
+      <workItem from="1562573823203" duration="3650000" />
+      <workItem from="1562658857536" duration="4481000" />
+      <workItem from="1562719797864" duration="6129000" />
+      <workItem from="1562805138393" duration="104000" />
+      <workItem from="1562814329820" duration="7944000" />
+      <workItem from="1562898101228" duration="1316000" />
+      <workItem from="1562900691907" duration="2222000" />
+      <workItem from="1562922280033" duration="1960000" />
+      <workItem from="1563172959370" duration="4669000" />
+      <workItem from="1563178619991" duration="1423000" />
+      <workItem from="1563180709556" duration="735000" />
+      <workItem from="1563181804686" duration="1646000" />
+      <workItem from="1563246236168" duration="4652000" />
+      <workItem from="1563354959945" duration="777000" />
+      <workItem from="1563441560334" duration="3178000" />
+      <workItem from="1563444782770" duration="6402000" />
+      <workItem from="1563504243359" duration="7679000" />
     </task>
     <task id="LOCAL-00001" summary="添加spark的wordcount">
       <created>1562417580881</created>
@@ -348,47 +402,115 @@
       <option name="project" value="LOCAL" />
       <updated>1562491715674</updated>
     </task>
-    <task id="LOCAL-00005" summary="spark上跑scala,java写的wordcount(分别在集群和本地运行)">
-      <created>1562504561549</created>
+    <task id="LOCAL-00005" summary="vue">
+      <created>1562573448097</created>
       <option name="number" value="00005" />
       <option name="presentableId" value="LOCAL-00005" />
       <option name="project" value="LOCAL" />
-      <updated>1562504561549</updated>
+      <updated>1562573448097</updated>
     </task>
-    <task id="LOCAL-00006" summary="vue依赖更新">
-      <created>1562595407221</created>
+    <task id="LOCAL-00006" summary="openresty配置build.xml的ant脚本">
+      <created>1562574767785</created>
       <option name="number" value="00006" />
       <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
-      <updated>1562595407221</updated>
+      <updated>1562574767785</updated>
     </task>
-    <task id="LOCAL-00007" summary="vue学习-vue样式属性的绑定">
-      <created>1563006903422</created>
+    <task id="LOCAL-00007" summary="让openresty在idea环境下跑起来">
+      <created>1562662609147</created>
       <option name="number" value="00007" />
       <option name="presentableId" value="LOCAL-00007" />
       <option name="project" value="LOCAL" />
-      <updated>1563006903422</updated>
+      <updated>1562662609147</updated>
     </task>
-    <task id="LOCAL-00008" summary="vue学习-v-if">
-      <created>1563286720500</created>
+    <task id="LOCAL-00008" summary="openresty学习-ngx模块开发">
+      <created>1562725969723</created>
       <option name="number" value="00008" />
       <option name="presentableId" value="LOCAL-00008" />
       <option name="project" value="LOCAL" />
-      <updated>1563286720501</updated>
+      <updated>1562725969723</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="vue学习-属性绑定">
+      <created>1562729582753</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1562729582753</updated>
+    </task>
+    <task id="LOCAL-00010" summary="openresty学习-ngx模块通过get获取uri的参数">
+      <created>1562816214766</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1562816214766</updated>
+    </task>
+    <task id="LOCAL-00011" summary="vue学习-跑马灯效果实现">
+      <created>1562828710900</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1562828710901</updated>
+    </task>
+    <task id="LOCAL-00012" summary="java学习-lambda之方法引用">
+      <created>1562923635252</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1562923635252</updated>
+    </task>
+    <task id="LOCAL-00013" summary="vue学习-v-for">
+      <created>1563175390430</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1563175390430</updated>
+    </task>
+    <task id="LOCAL-00014" summary="openresty学习-配置文件解决转义问题">
+      <created>1563177573262</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1563177573262</updated>
+    </task>
+    <task id="LOCAL-00015" summary="openresty学习-lua获取nginx的内置变量">
+      <created>1563179237060</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1563179237060</updated>
+    </task>
+    <task id="LOCAL-00016" summary="java学习-lambda之构造引用">
+      <created>1563182841837</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1563182841837</updated>
+    </task>
+    <task id="LOCAL-00017" summary="java学习-lambda之stream">
+      <created>1563269332385</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1563269332385</updated>
+    </task>
+    <task id="LOCAL-00018" summary="vue学习-bootstrap插件实现快捷操作">
+      <created>1563446518705</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1563446518705</updated>
+    </task>
+    <task id="LOCAL-00019" summary="vue学习-数组操作">
+      <created>1563453927654</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1563453927654</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="HdfsTest_testUpload - 2019.07.04 at 17h 03m 53s.xml">
-      <configuration name="HdfsTest.testUpload" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="HdfsTest_testUpload - 2019.07.04 at 17h 19m 25s.xml">
-      <configuration name="HdfsTest.testUpload" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="HdfsTest_testUpload - 2019.07.04 at 17h 23m 30s.xml">
-      <configuration name="HdfsTest.testUpload" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="HdfsTest_testUpload - 2019.07.04 at 17h 29m 31s.xml">
       <configuration name="HdfsTest.testUpload" configurationId="JUnit" />
     </history-entry>
@@ -410,16 +532,25 @@
     <history-entry file="HdfsTest_testMove - 2019.07.06 at 19h 21m 42s.xml">
       <configuration name="HdfsTest.testMove" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="BoolLogicalCalc_testBoolLogicalCalc - 2019.07.19 at 07h 22m 11s.xml">
+      <configuration name="BoolLogicalCalc.testBoolLogicalCalc" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BoolLogicalCalc_testBoolLogicalCalc - 2019.07.19 at 07h 22m 33s.xml">
+      <configuration name="BoolLogicalCalc.testBoolLogicalCalc" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BoolLogicalCalc_testBoolLogicalCalc - 2019.07.19 at 07h 22m 51s.xml">
+      <configuration name="BoolLogicalCalc.testBoolLogicalCalc" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36287000" />
+    <option name="totallyTimeSpent" value="87179000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-4" y="-4" width="1928" height="1036" extended-state="6" />
+    <frame x="-9" y="-9" width="1618" height="870" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.237352" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.48968363" visible="true" weight="0.2962725" />
+      <window_info id="Structure" order="1" sideWeight="0.5103164" side_tool="true" weight="0.28856042" />
       <window_info id="Designer" order="2" />
       <window_info id="Capture Tool" order="3" />
       <window_info id="UI Designer" order="4" />
@@ -427,24 +558,24 @@
       <window_info id="Image Layers" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.40924856" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.82255846" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39930555" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Spring" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3287858" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50053823" side_tool="true" weight="0.32947975" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5006418" side_tool="true" weight="0.3287483" />
       <window_info anchor="bottom" id="Messages" order="11" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" />
       <window_info anchor="bottom" id="Database Changes" order="13" />
-      <window_info anchor="bottom" id="Version Control" order="14" sideWeight="0.4994618" weight="0.32947975" />
+      <window_info anchor="bottom" id="Version Control" order="14" sideWeight="0.49935815" weight="0.3287483" />
       <window_info anchor="bottom" id="LuaCheck" order="15" weight="0.3298611" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" weight="0.32938644" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.24935733" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" visible="true" weight="0.10475578" />
+      <window_info anchor="right" id="Maven" order="3" weight="0.32904884" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="Database" order="6" />
@@ -456,6 +587,16 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
@@ -463,30 +604,37 @@
     <MESSAGE value="重新整理模块与工程的关系" />
     <MESSAGE value="添加lua学习模块" />
     <MESSAGE value="添加openResty学习模块" />
-    <MESSAGE value="spark上跑scala,java写的wordcount(分别在集群和本地运行)" />
-    <MESSAGE value="vue依赖更新" />
-    <MESSAGE value="vue学习-vue样式属性的绑定" />
-    <MESSAGE value="vue学习-v-if" />
-    <option name="LAST_COMMIT_MESSAGE" value="vue学习-v-if" />
+    <MESSAGE value="vue" />
+    <MESSAGE value="openresty配置build.xml的ant脚本" />
+    <MESSAGE value="让openresty在idea环境下跑起来" />
+    <MESSAGE value="openresty学习-ngx模块开发" />
+    <MESSAGE value="vue学习-属性绑定" />
+    <MESSAGE value="openresty学习-ngx模块通过get获取uri的参数" />
+    <MESSAGE value="vue学习-跑马灯效果实现" />
+    <MESSAGE value="java学习-lambda之方法引用" />
+    <MESSAGE value="vue学习-v-for" />
+    <MESSAGE value="openresty学习-配置文件解决转义问题" />
+    <MESSAGE value="openresty学习-lua获取nginx的内置变量" />
+    <MESSAGE value="java学习-lambda之构造引用" />
+    <MESSAGE value="java学习-lambda之stream" />
+    <MESSAGE value="vue学习-bootstrap插件实现快捷操作" />
+    <MESSAGE value="vue学习-数组操作" />
+    <option name="LAST_COMMIT_MESSAGE" value="vue学习-数组操作" />
+    <option name="GROUP_MULTIFILE_MERGE_BY_DIRECTORY" value="true" />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+    <buildFile url="file://$PROJECT_DIR$/learnOpenresty/build.xml">
+      <targetFilters>
+        <filter targetName="clean" isVisible="false" />
+        <filter targetName="init" isVisible="false" />
+        <filter targetName="copy" isVisible="true" />
+      </targetFilters>
+      <expanded value="true" />
+    </buildFile>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/learnHadoop/src/test/java/com/haanoo/AppTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="702">
-          <caret line="37" column="1" lean-forward="true" selection-start-line="37" selection-start-column="1" selection-end-line="37" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/learn.iml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6639">
-          <caret line="8" column="12" lean-forward="true" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.idea/learn.iml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -497,16 +645,6 @@
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-11439" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/learnHadoop/src/test/java/com/haanoo/HdfsTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="12" column="47" selection-start-line="12" selection-start-column="47" selection-end-line="12" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/learnSpark/src/main/scala/com.haanoo.WordCount/ScalaWordCount.scala" />
@@ -523,14 +661,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/learnHadoop/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
-        </state>
-      </provider>
-      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/learnHadoop/src/main/java/com/haanoo/App.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -539,59 +669,28 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
           <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
         </state>
       </provider>
-      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/learnSpark/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
-        </state>
-      </provider>
-      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/learnLua/src/HelloLua.lua">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="6" column="10" lean-forward="true" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/spark/spark-core_2.11/2.2.0/spark-core_2.11-2.2.0.jar!/org/apache/spark/api/java/JavaRDDLike.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="17" column="65" selection-start-line="17" selection-start-column="65" selection-end-line="17" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/spark/spark-core_2.11/2.2.0/spark-core_2.11-2.2.0.jar!/org/apache/spark/api/java/function/FlatMapFunction.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/spark/spark-core_2.11/2.2.0/spark-core_2.11-2.2.0-sources.jar!/org/apache/spark/api/java/JavaRDDLike.scala">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/spark/spark-core_2.11/2.2.0/spark-core_2.11-2.2.0-sources.jar!/org/apache/spark/api/java/function/FlatMapFunction.java">
+    <entry file="file://$PROJECT_DIR$/learnSpark/src/main/scala/com/haanoo/wordcount/ScalaWordCount.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
-          <caret line="23" column="3" selection-start-line="23" selection-start-column="3" selection-end-line="23" selection-end-column="3" />
+          <caret line="7" column="41" lean-forward="true" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
+          <folding>
+            <element signature="e#30#61#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/spark/spark-core_2.11/2.2.0/spark-core_2.11-2.2.0-sources.jar!/org/apache/spark/api/java/JavaPairRDD.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="892" column="14" lean-forward="true" selection-start-line="892" selection-start-column="14" selection-end-line="892" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://F:/mvn/repo/repo_b2c/osgi-repository(2)/org/apache/spark/spark-core_2.11/2.2.0/spark-core_2.11-2.2.0.jar!/org/apache/spark/api/java/JavaRDDLike.class" />
+    <entry file="jar://F:/mvn/repo/repo_b2c/osgi-repository(2)/org/apache/spark/spark-core_2.11/2.2.0/spark-core_2.11-2.2.0.jar!/org/apache/spark/api/java/function/FlatMapFunction.class" />
+    <entry file="jar://F:/mvn/repo/repo_b2c/osgi-repository(2)/org/apache/spark/spark-core_2.11/2.2.0/spark-core_2.11-2.2.0-sources.jar!/org/apache/spark/api/java/JavaRDDLike.scala" />
+    <entry file="jar://F:/mvn/repo/repo_b2c/osgi-repository(2)/org/apache/spark/spark-core_2.11/2.2.0/spark-core_2.11-2.2.0-sources.jar!/org/apache/spark/api/java/function/FlatMapFunction.java" />
+    <entry file="jar://F:/mvn/repo/repo_b2c/osgi-repository(2)/org/apache/spark/spark-core_2.11/2.2.0/spark-core_2.11-2.2.0-sources.jar!/org/apache/spark/api/java/JavaPairRDD.scala" />
     <entry file="file://$PROJECT_DIR$/learnSpark/src/main/java/com/haanoo/wordcount/JavaWordCount.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
@@ -604,84 +703,247 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/learnSpark/src/main/java/com/haanoo/wordcount/LambdaWordCount.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="18" column="52" lean-forward="true" selection-start-line="18" selection-start-column="52" selection-end-line="18" selection-end-column="52" />
+        <state relative-caret-position="360">
+          <caret line="22" column="12" lean-forward="true" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/spark/spark-core_2.11/2.2.0/spark-core_2.11-2.2.0-sources.jar!/org/apache/spark/rdd/RDD.scala">
+    <entry file="file://$PROJECT_DIR$/learnVue/src/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="65" column="55" selection-start-line="65" selection-start-column="55" selection-end-line="65" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/learnSpark/src/main/scala/com/haanoo/wordcount/ScalaWordCount.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
+        <state relative-caret-position="405">
+          <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
           <folding>
-            <element signature="e#30#61#0" expanded="true" />
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#140#161#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/learnVue/src/router/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/learnVue/src/App.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="12" column="7" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/learnVue/src/components/elementUI.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="7" column="39" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/learnOpenresty/build.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/learnVue/package.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/learnVue/dist/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="40" lean-forward="true" selection-start-column="40" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/learnVue/static/mine/js/vue.min.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/learnLua/src/HelloLua.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="6" column="10" lean-forward="true" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/learnHadoop/src/test/java/com/haanoo/HdfsTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="24" column="35" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/learnVue/static/mine/horseRaceLamp.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="32" column="14" selection-start-line="32" selection-start-column="14" selection-end-line="32" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/learnHadoop/pom.xml">
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/learnSpark/pom.xml">
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="464">
+          <caret line="19" lean-forward="true" selection-start-line="11" selection-start-column="3" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_66/src.zip!/java/util/Random.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="103" column="11" selection-start-line="103" selection-start-column="11" selection-end-line="103" selection-end-column="11" />
+          <folding>
+            <element signature="e#3504#3505#0" expanded="true" />
+            <element signature="e#3562#3563#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_66/src.zip!/java/util/function/Consumer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="50" column="7" lean-forward="true" selection-start-line="50" selection-start-column="7" selection-end-line="50" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_66/src.zip!/java/util/function/Supplier.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="47" column="12" lean-forward="true" selection-start-line="47" selection-start-column="12" selection-end-line="47" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/learnVue/static/mine/template.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="5" column="7" lean-forward="true" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/learnVue/static/mine/v-directive.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="7" column="12" lean-forward="true" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/learnSpark/src/main/scala/com/haanoo/wordcount/WordCountRunByLocalMode.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="13" column="55" selection-start-line="13" selection-start-column="55" selection-end-line="13" selection-end-column="55" />
+        <state relative-caret-position="382">
+          <caret line="21" column="14" lean-forward="true" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/learnVue/static/mine/vue-class.html">
+    <entry file="file://$PROJECT_DIR$/learnVue/static/mine/v-for.html" />
+    <entry file="file://$PROJECT_DIR$/learnOpenresty/src/hello.lua">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+        <state relative-caret-position="261">
+          <caret line="9" column="60" selection-start-line="9" selection-end-line="9" selection-end-column="60" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/learnVue/static/mine/v-for_and_v-if.html">
+    <entry file="file://$PROJECT_DIR$/learnJava/src/main/java/com/haanoo/lambda/RefFunctionDemo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="15" column="38" lean-forward="true" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
+        <state relative-caret-position="435">
+          <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#168#169#0" expanded="true" />
+            <element signature="e#213#214#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/learnJava/src/main/java/com/haanoo/lambda/SteamDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/learnJava/src/main/java/com/haanoo/lambda/RefConstructorDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="406">
+          <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+          <folding>
+            <element signature="e#286#287#0" expanded="true" />
+            <element signature="e#338#339#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/learnOpenresty/conf/mime.types">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-870" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/learnOpenresty/conf/hello.lua">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/learnOpenresty/src/response.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/learnOpenresty/conf/nginx.conf">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2088">
-          <caret line="36" column="27" selection-start-line="36" selection-start-column="27" selection-end-line="36" selection-end-column="27" />
+        <state relative-caret-position="33">
+          <caret line="17" column="45" lean-forward="true" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/learnJava/pom.xml">
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="25" column="26" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/learnOpenresty/conf/lua.conf">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="24" column="47" selection-start-line="24" selection-start-column="47" selection-end-line="24" selection-end-column="47" />
+        <state relative-caret-position="204">
+          <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/learnOpenresty/src/hello.lua">
+    <entry file="file://$PROJECT_DIR$/learnJava/src/test/java/com/haanoo/BoolLogicalCalc.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="7" column="37" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
+        <state relative-caret-position="413">
+          <caret line="15" column="33" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/learnOpenresty/src/response.lua">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="5" column="28" lean-forward="true" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/learnVue/static/mine/css/bootstrap-3.3.7.css">
+    <entry file="file://$PROJECT_DIR$/learnVue/static/mine/js/vue-2.4.0.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/learnVue/static/mine/products-with-search.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="39" column="12" lean-forward="true" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="12" />
+        <state relative-caret-position="226">
+          <caret line="57" column="25" selection-start-line="57" selection-start-column="25" selection-end-line="57" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -738,7 +1000,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>learnOpenresty</last-edited>
+          <last-edited>learnJava</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
