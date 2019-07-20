@@ -36,3 +36,10 @@ ngx.say("raw headers ",ngx.req.raw_header(),"<br/>")
 ngx.req.read_body()
 ngx.say("body data ",ngx.req.get_body_data(),"<br/>")
 
+local var = ngx.var.request_uri;
+ngx.say("request_uri:",request_uri,"<br/>")
+ngx.say("md5(123):",ngx.md5(123),"<br/>")
+
+
+
+
