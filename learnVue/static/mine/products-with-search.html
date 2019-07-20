@@ -58,7 +58,7 @@
   <tr v-for="o in search()" :key="o.id">
     <td>{{o.id}}</td>
     <td>{{o.name}}</td>
-    <td>{{o.creatTime}}</td>
+    <td>{{o.creatTime | dateFormat("yyyy-mm-dd")}}</td>
     <td><a href="" @click.prevent="del(o.id)">删除</a></td>
   </tr>
   </tbody>
@@ -67,6 +67,22 @@
 
 
 <script>
+
+  Vue.filter("dateFormat",function (src,pattern="") {
+      var dt = new Date(src);
+      var y = dt.getFullYear();
+      var m = dt.getMonth();
+      var d = dt.getDate();
+      var h = dt.getHours();
+      var minutes = dt.getMinutes();
+      var s = dt.getSeconds();
+      if(pattern.toLowerCase() === "yyyy-mm-dd"){
+        return `${y}-${m}-${d}`
+      }
+      return `${y}-${m}-${d} ${h}:${minutes}:${s}`
+  })
+
+
   var vm = new Vue({
     el:"#app",
     data:{
