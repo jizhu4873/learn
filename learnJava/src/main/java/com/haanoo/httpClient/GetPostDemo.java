@@ -9,6 +9,7 @@ import org.apache.http.client.methods.HttpPost;
 import org.apache.http.client.utils.URIBuilder;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
+import org.apache.http.impl.conn.PoolingHttpClientConnectionManager;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
 
@@ -17,7 +18,7 @@ import java.net.URI;
 import java.nio.charset.Charset;
 import java.util.ArrayList;
 
-public class GetDemo {
+public class GetPostDemo {
     public static void main(String[] args) {
         //testGet();
         postWithParam();
@@ -25,6 +26,30 @@ public class GetDemo {
 
     public static void testGet() {
         CloseableHttpClient client = HttpClients.createDefault();
+        try {
+            HttpGet get = new HttpGet(URI.create("https://www.baidu.com"));
+            CloseableHttpResponse response = client.execute(get);
+            if(response.getStatusLine().getStatusCode() == 200){
+                HttpEntity entity = response.getEntity();
+                String content = EntityUtils.toString(entity, Charset.forName("utf-8"));
+                System.out.println(content);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                client.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public static void getFromPool() {
+        PoolingHttpClientConnectionManager cm = new PoolingHttpClientConnectionManager();
+        cm.setDefaultMaxPerRoute(10);
+        cm.setMaxTotal(100);
+        CloseableHttpClient client  = HttpClients.custom().setConnectionManager(cm).build();
         try {
             HttpGet get = new HttpGet(URI.create("https://www.baidu.com"));
             CloseableHttpResponse response = client.execute(get);
