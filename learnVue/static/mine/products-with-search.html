@@ -32,7 +32,7 @@
 
       <label>
         Name:
-        <input type="text" class="form-control" v-model="name">
+        <input type="text" class="form-control" v-model="name" @keyup.f2="add">
       </label>
 
       <!-- 在Vue中，使用事件绑定机制，为元素指定处理函数的时候，如果加了小括号，就可以给函数传参了 -->
@@ -58,7 +58,7 @@
   <tr v-for="o in search()" :key="o.id">
     <td>{{o.id}}</td>
     <td>{{o.name}}</td>
-    <td>{{o.creatTime | dateFormat("yyyy-mm-dd")}}</td>
+    <td>{{o.creatTime | dateFormat}}</td>
     <td><a href="" @click.prevent="del(o.id)">删除</a></td>
   </tr>
   </tbody>
@@ -68,7 +68,7 @@
 
 <script>
 
-  Vue.filter("dateFormat",function (src,pattern="") {
+  /*Vue.filter("dateFormat",function (src,pattern="") {
       var dt = new Date(src);
       var y = dt.getFullYear();
       var m = dt.getMonth();
@@ -80,9 +80,10 @@
         return `${y}-${m}-${d}`
       }
       return `${y}-${m}-${d} ${h}:${minutes}:${s}`
-  })
+  })*/
 
-
+  // 自定义按键修饰符（113对应键盘F2）
+Vue.config.keyCodes.f2 = 113
   var vm = new Vue({
     el:"#app",
     data:{
@@ -115,6 +116,21 @@
             return item;
           }
         })
+      }
+    },
+    filters:{
+      dateFormat(src,pattern="") {
+        var dt = new Date(src);
+        var y = dt.getFullYear();
+        var m = (dt.getMonth()+1).toString().padStart(2,"0");
+        var d = dt.getDate();
+        var h = dt.getHours();
+        var minutes = dt.getMinutes();
+        var s = dt.getSeconds();
+        if(pattern.toLowerCase() === "yyyy-mm-dd"){
+          return `${y}-${m}-${d}`
+        }
+        return `${y}-${m}-${d} ${h}:${minutes}:${s}`
       }
     }
   });
