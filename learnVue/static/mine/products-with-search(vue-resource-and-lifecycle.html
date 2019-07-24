@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>template</title>
+  <link rel="stylesheet" href="css/bootstrap-3.3.7.css">
+  <script src="js/vue-2.4.0.js"></script>
+  <script src="js/vue-resource-1.3.4.js"></script>
+</head>
+<style>
+  [v-cloak]{
+    display: none;
+  }
+</style>
+<body>
+<div id="app">
+
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h3 class="panel-title">添加品牌</h3>
+    </div>
+    <div class="panel-body form-inline">
+      <label>
+        Name:
+        <input type="text" class="form-control" v-model="name" @keyup.enter="add">
+      </label>
+
+      <!-- 在Vue中，使用事件绑定机制，为元素指定处理函数的时候，如果加了小括号，就可以给函数传参了 -->
+      <input type="button" value="添加" class="btn btn-primary" @click="add()">
+
+      <label>
+        搜索名称关键字：
+        <input type="text" class="form-control" v-model="keyWord">
+      </label>
+    </div>
+  </div>
+
+<table class="table table-bordered table-hover table-striped">
+  <thead>
+  <tr>
+    <th>id</th>
+    <th>name</th>
+    <th>creatTime</th>
+    <th>op</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr v-for="o in list" :key="o.id">
+    <td>{{o.id}}</td>
+    <td>{{o.name}}</td>
+    <td>{{o.ctime}}</td>
+    <td><a href="" @click.prevent="del(o.id)">删除</a></td>
+  </tr>
+  </tbody>
+</table>
+</div>
+
+
+<script>
+  Vue.http.options.root="https://www.easy-mock.com/mock/5d09930224add5128091e046/example"
+  var vm = new Vue({
+    el:"#app",
+    data:{
+      keyWord:"",
+      name:"",
+      list:[
+        {id:1,name:"大奔",ctime:new Date()},
+        {id:2,name:"宝马",ctime:new Date()},
+      ]
+    },
+    methods:{
+      initList(){
+        const _this = this
+        this.$http.get("getprodlist").then(result=>{
+          console.log(result)
+          this.list = result.body.message
+        })
+      },
+      add(){
+        var car = {id:this.id,name:this.name,creatTime:new Date()}
+        this.list.push(car)
+        this.name=this.id=""
+      },
+      del(id){
+        this.list.some((item,idx)=>{
+          if(id == item.id){
+            this.list.splice(idx,1);
+            return true;
+          }
+        })
+      },
+      search(){
+        return this.list.filter(item=>{
+          if(item.name.includes(this.keyWord)){
+            return item;
+          }
+        })
+      }
+    },
+    filters:{
+      dateFormat(src,pattern="") {
+        var dt = new Date(src);
+        var y = dt.getFullYear();
+        var m = (dt.getMonth()+1).toString().padStart(2,"0");
+        var d = dt.getDate();
+        var h = dt.getHours();
+        var minutes = dt.getMinutes();
+        var s = dt.getSeconds();
+        if(pattern.toLowerCase() === "yyyy-mm-dd"){
+          return `${y}-${m}-${d}`
+        }
+        return `${y}-${m}-${d} ${h}:${minutes}:${s}`
+      }
+    },
+    created() {
+      this.initList()
+    }
+  });
+</script>
+</body>
+</html>

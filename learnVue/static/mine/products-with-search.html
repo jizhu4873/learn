@@ -40,7 +40,7 @@
 
       <label>
         搜索名称关键字：
-        <input type="text" class="form-control" v-model="keywords">
+        <input type="text" class="form-control" v-model="keywords" v-focus>
       </label>
     </div>
   </div>
@@ -131,6 +131,14 @@ Vue.config.keyCodes.f2 = 113
           return `${y}-${m}-${d}`
         }
         return `${y}-${m}-${d} ${h}:${minutes}:${s}`
+      }
+    },
+    directives:{
+      focus:{
+        inserted(dom){
+          dom.focus()
+        }
+
       }
     }
   });
