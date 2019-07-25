@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>template</title>
+  <link rel="stylesheet" href="css/bootstrap-3.3.7.css">
+</head>
+<style>
+
+</style>
+
+<template id="tmpl">
+    <div>
+      <h1>hello component</h1>
+      <h2>hello component</h2>
+    </div>
+</template>
+<body>
+<div id="app">
+  <hello-component></hello-component>
+</div>
+
+
+
+<script src="js/vue-2.4.0.js"></script>
+<script>
+
+  var vm = new Vue({
+    el:"#app",
+    components:{
+      helloComponent:{template: "#tmpl"}
+    }
+  });
+
+</script>
+</body>
+</html>

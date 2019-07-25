@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>template</title>
+  <link rel="stylesheet" href="css/bootstrap-3.3.7.css">
+</head>
+<style>
+
+</style>
+<body>
+<div id="app">
+  <hello-component></hello-component>
+  <hello-component2></hello-component2>
+</div>
+
+
+<script src="js/vue-2.4.0.js"></script>
+<script>
+  var helloComponent = Vue.extend({
+    template:"<h1>hello component added with global scope</h1>"
+  })
+
+  Vue.component("helloComponent",helloComponent)
+
+  Vue.component("helloComponent2",{template:"<h1>hello component implicitly added with  global scope</h1>"})
+
+  var vm = new Vue({
+    el:"#app",
+    data:{
+      msg:"world"
+    },
+    methods:{
+
+    }
+  });
+
+</script>
+</body>
+</html>

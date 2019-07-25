@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>template</title>
+  <link rel="stylesheet" href="css/bootstrap-3.3.7.css">
+  <script src="js/vue-2.4.0.js"></script>
+</head>
+<style>
+  .ball{
+    width: 100px;
+    height: 100px;
+    background-color: #ffc9bf;
+    border-radius: 50%;
+  }
+</style>
+<body>
+<div id="app">
+  <div class="btn-group" style="margin-left: 50%;margin-top: 10%">
+    <button type="button" class="btn btn-default" @click="flag=!flag">toggle</button>
+  </div>
+
+  <transition
+    @before-enter="beforeEnter"
+    @enter="enter"
+    v-on:after-enter="afterEnter"
+  >
+    <div class="ball" v-if="flag"></div>
+  </transition>
+</div>
+
+
+<script>
+  var vm = new Vue({
+    el:"#app",
+    data:{
+      flag:false
+    },
+    methods:{
+      beforeEnter: function (el) {
+        el.style.opacity = 0
+        el.style.transform = "translate(120px,20px)"
+      },
+      enter(el,done){
+        el.offsetHeight
+        el.style.opacity = 100
+        el.style.transform = "translate(300px,300px)"
+        el.style.transition="all 2s ease"
+        done()
+      },
+      afterEnter(el){
+        this.flag = false
+      }
+    }
+  });
+
+</script>
+</body>
+</html>

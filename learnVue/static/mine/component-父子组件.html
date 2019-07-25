@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>template</title>
+  <link rel="stylesheet" href="css/bootstrap-3.3.7.css">
+</head>
+<style>
+
+</style>
+
+<body>
+<div id="app">
+  <com :parent-msg="msg" @parent-func="func" ref="refCom"></com>
+</div>
+
+
+<template id="tmpl">
+  <h1 @click="callParentFunc">hello {{parentMsg}}</h1>
+</template>
+
+<script src="js/vue-2.4.0.js"></script>
+<script>
+  var vm = new Vue({
+    el:"#app",
+    data:{
+      msg:"world"
+    },
+    methods:{
+      func(){
+        console.log(this.$refs.refCom)
+      }
+    },
+    components:{
+      com:{
+        template:"#tmpl",
+        props:['parentMsg'],
+        methods: {
+          callParentFunc(){
+            this.$emit("parent-func")
+
+          }
+        }
+      }
+    }
+  });
+
+</script>
+</body>
+</html>

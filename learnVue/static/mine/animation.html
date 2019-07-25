@@ -10,14 +10,14 @@
     display: none;
   }
 
-  .v-enter,
-  .v-leave-to{
+  .my-enter,
+  .my-leave-to{
     opacity: 0;
     transform: translateX(150px);
   }
 
-  .v-leave-active,
-  .v-enter-active{
+  .my-leave-active,
+  .my-enter-active{
     transition: all 1s ease;
   }
 
@@ -28,7 +28,7 @@
     <button type="button" class="btn btn-default" @click="flag=!flag">toggle</button>
   </div>
 
-  <transition>
+  <transition name="my">
     <h3 v-show="flag">effection of animation</h3>
   </transition>
 </div>

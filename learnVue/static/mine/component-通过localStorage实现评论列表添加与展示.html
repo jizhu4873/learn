@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>template</title>
+  <script src="js/vue-2.4.0.js"></script>
+  <link rel="stylesheet" href="css/bootstrap-3.3.7.css">
+</head>
+<style>
+
+</style>
+
+
+<body>
+<div id="app">
+  <cmmt @func="loadCmts"></cmmt>
+  <br/>
+  <br/>
+  <ul class="list-group">
+    <li v-for="c in cmts" class="list-group-item" :key="c.id">
+      <span class="badge">{{c.user}}</span>
+      {{c.content}}
+    </li>
+  </ul>
+</div>
+
+<template id="tmpl">
+  <div>
+  <div class="form-group">
+    <label  class="col-sm-2 control-label">用户名</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" v-model="user">
+    </div>
+  </div>
+  <div class="form-group">
+    <label  class="col-sm-2 control-label">评论内容</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" v-model="content">
+    </div>
+  </div>
+  <div class="btn-group">
+    <button type="button" class="btn btn-default" @click="postComm" >发表评论</button>
+  </div>
+  </div>
+</template>
+
+
+<script>
+
+  var vm = new Vue({
+    el:"#app",
+    data:{
+      cmts:[]
+    },
+    components:{
+      cmmt:{
+        template: "#tmpl",
+        data(){
+          return {cmts:[],user:"",content:""}
+        },
+        methods:{
+          postComm(){
+            var cm = {id:Date.now(),user:this.user,content:this.content}
+            var cmts = JSON.parse(localStorage.getItem("cmts")||"[]");
+            cmts.unshift(cm)
+            localStorage.setItem("cmts",JSON.stringify(cmts))
+            this.user=this.content=""
+            this.$emit("func")
+          }
+        }
+      }
+    },
+    methods:{
+      loadCmts(){
+        var cmts = JSON.parse(localStorage.getItem("cmts") || "[]");
+        this.cmts = cmts
+      }
+    },
+    created(){
+      this.loadCmts()
+    }
+  });
+
+</script>
+</body>
+</html>

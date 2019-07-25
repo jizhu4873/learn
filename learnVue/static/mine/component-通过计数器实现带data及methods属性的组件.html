@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>template</title>
+  <link rel="stylesheet" href="css/bootstrap-3.3.7.css">
+</head>
+<style>
+
+</style>
+
+<template id="tmpl">
+    <div>
+      <div class="btn-group">
+        <button type="button" class="btn btn-default" @click="++dt">++1</button>
+      </div>
+      <span class="label label-info">{{dt}}</span>
+    </div>
+</template>
+<body>
+<div id="app">
+  <counter></counter>
+</div>
+
+
+
+<script src="js/vue-2.4.0.js"></script>
+<script>
+
+  Vue.component("counter",{
+    template:"#tmpl",
+    data(){
+      return {dt:1}
+    }
+  })
+
+  var vm = new Vue({
+    el:"#app",
+    data:{
+      msg:"world"
+    },
+    methods:{
+
+    }
+  });
+
+</script>
+</body>
+</html>
