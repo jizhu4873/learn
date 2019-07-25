@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>命名视图</title>
+  <link rel="stylesheet" href="css/bootstrap-3.3.7.css">
+  <script src="js/vue-2.4.0.js"></script>
+  <script src="js/vue-resource-1.3.4.js"></script>
+  <script src="js/vue-router-3.0.1.js"></script>
+</head>
+<style>
+.header{
+  background-color: #87ffcf;
+  height: 80px;
+}
+  .con{
+    display: flex;
+    height: 600px;
+  }
+  .left{
+    background-color: #b0ffd8;
+    flex: 2;
+  }
+  .main{
+    background-color: #cdffcb;
+    flex: 8;
+  }
+</style>
+<body>
+<div id="app">
+  <router-view name="headComp"></router-view>
+  <div class="con">
+    <router-view name="leftComp"></router-view>
+    <router-view name="mainComp"></router-view>
+  </div>
+</div>
+
+<script>
+  var headComp = {
+    template:"<div class='header'>标题内容</div>"
+  }
+  var leftComp = {
+    template:"<div class='left'>左侧内容</div>"
+  }
+  var mainComp = {
+    template:"<div class='main'>主题内容</div>"
+  }
+  var router = new VueRouter({routes:[{
+    path: "/",
+    components: {
+      headComp,
+      leftComp,
+      mainComp
+    }
+  }]})
+  var vm = new Vue({
+    el:"#app",
+    router
+  });
+
+</script>
+</body>
+</html>

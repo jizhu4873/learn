@@ -55,8 +55,10 @@
 
   var vm = new Vue({
     el:"#app",
-    data:{
-      msg:"world"
+    watch:{
+      '$route.path':function (newVal,oldVal) {
+          console.log(newVal+" " + oldVal)
+      }
     },
     methods:{
     },
