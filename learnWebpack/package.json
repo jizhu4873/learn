@@ -1,0 +1,23 @@
+{
+  "name": "learnwebpack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "jquery": "^3.4.1"
+  },
+  "devDependencies": {
+    "css-loader": "^3.1.0",
+    "less": "^2.7.3",
+    "less-loader": "^4.0.5",
+    "style-loader": "^0.23.1",
+    "webpack": "^3.8.1",
+    "webpack-dev-server": "^2.9.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack-dev-server --port 8081 --contentBase src --hot"
+  },
+  "author": "",
+  "license": "ISC"
+}
