@@ -1,0 +1,1 @@
+local redis = require "resty.redis"
