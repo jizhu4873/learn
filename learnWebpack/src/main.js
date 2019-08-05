@@ -11,3 +11,9 @@ $(function () {
         return "#69ff7e"
     })
 })
+
+//es6高级语法
+class Person {
+    static info={name:"贾雨村",age:39}
+}
+console.log(Person.info)

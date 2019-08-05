@@ -28,6 +28,9 @@ module.exports={
             {
                 test:/(ttf|eot|svg|woff|woff2)$/,
                 use:["url-loader"]
+            },
+            {  //解析es6，es7高级语法，需排除node_modules的js文件
+                test:/\.js$/,use:["babel-loader"],exclude:/node_modules/
             }
         ]
     }
