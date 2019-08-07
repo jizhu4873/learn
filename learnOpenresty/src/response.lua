@@ -8,4 +8,9 @@
 -- redirect前面不能出现say/print等方法
 -- ngx.redirect("https://music.163.com")
 
-return ngx.exit(404)
+-- return ngx.exit(404)
+count = count +1
+ngx.say("count:",count)
+local shared = ngx.shared.my_shared_data;
+shared:incr("count",2)
+ngx.say("<br/>count from shared_dict :",shared:get("count"))
