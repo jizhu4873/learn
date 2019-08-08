@@ -1,0 +1,29 @@
+.gradle/
+build/
+target/
+bin/
+node_modules
+.idea
+.classpath
+.project
+.settings/
+
+target/
+out/
+
+classes/
+*.depend
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
