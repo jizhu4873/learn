@@ -5,6 +5,7 @@
     <script language="javascript" src="js/LodopFuncs.js"></script>
     <script language="javascript" src="js/jquery-3.4.1.js"></script>
     <script language="javascript" src="js/vue-2.4.0.js"></script>
+    <script language="javascript" src="js/axios-0.18.0.min.js"></script>
     <link rel="stylesheet" href="css/bootstrap-3.3.7.css">
     <style id="stl">
         #content div{
@@ -21,7 +22,6 @@
             background-color: #ffcab8;
         }
     </style>
-
     <style>
         span:hover{
             cursor: move;
@@ -33,7 +33,7 @@
     <div id="content" @mouseup="end">
         <div>
             <span v-for="(item,idx) in list" :id="'content'+idx"
-                @mousedown="down(idx)"  @mousemove.capture="move(idx)"  @mouseup="end">
+                @mousedown="down(idx)"  @mousemove.capture="move(idx)"  >
                 {{item.val}}
             </span>
         </div>
@@ -47,10 +47,7 @@
     var vm = new Vue({
         el:"#app",
         data:{
-            list:[
-                {val:25,left:100,top:10},
-                {val:152,left:80,top:100}
-                ],
+            list:[],
             flags:false,
             position:{x:0,y:0},
             nx: '', ny: '', dx: '', dy: '', xPum: '', yPum: '',
@@ -95,8 +92,17 @@
                     if(this.yPum > height){
                         this.yPum = height-20;
                     }
+                    //坐标位置赋值给当前dom元素
                     cnt.style.left = this.xPum+"px";
                     cnt.style.top = this.yPum +"px";
+                    //对当前元素的坐标位置持久化
+                    this.list = this.list.map(e=>{
+                     if(e.idx==idx){
+                       e.top = this.yPum;
+                       e.left = this.xPum;
+                     }
+                     return e;
+                   })
                 }
             },
             end(){
@@ -104,11 +110,21 @@
             }
         },
         mounted(){
+            console.info("mounted=======================")
             this.list.forEach((e,idx)=>{
                 var cnt = document.getElementById("content"+idx);
                 cnt.style.left = e.left+"px";
                 cnt.style.top = e.top+"px";
             })
+        },
+        created() {
+          console.info("created=======================")
+          //后台获取所有打印元素
+          let url = "https://www.easy-mock.com/mock/5d09930224add5128091e046/example/lodop/printData";
+          axios
+            .get(url)
+            .then(res =>{this.list = res.data.data.content})
+            .catch(error=>console.log(error));
         }
     });
 </script>
