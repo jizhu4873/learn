@@ -1,9 +1,9 @@
 <template>
   <div class="my-container">
     <mt-header fixed title="mint项目学习"></mt-header>
-
-    <router-view></router-view>
-
+    <transition name="fade">
+      <router-view></router-view>
+    </transition>
     <!--底部-->
     <nav class="mui-bar mui-bar-tab">
       <router-link class="mui-tab-item" to="/home">
@@ -35,5 +35,18 @@
 <style lang="scss" scoped>
 .my-container{
   padding-top: 40px;
+  overflow-x: hidden;
+}
+.fade-enter-active, .fade-leave-active {
+  transition: all .5s ease;
+}
+.fade-enter {
+  opacity: 0;
+  transform:translateX(100%);
+}
+.fade-leave-to  {
+  opacity: 0;
+  transform:translateX(-100%);
+  position: absolute;
 }
 </style>
