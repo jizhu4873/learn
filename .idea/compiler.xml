@@ -8,8 +8,8 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="learnHadoop" />
-        <module name="learnSpark" />
         <module name="learnJava" />
+        <module name="learnSpark" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8">

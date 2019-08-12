@@ -1,132 +1,138 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>无标题文档</title>
-    <script language="javascript" src="js/LodopFuncs.js"></script>
-    <script language="javascript" src="js/jquery-3.4.1.js"></script>
-    <script language="javascript" src="js/vue-2.4.0.js"></script>
-    <script language="javascript" src="js/axios-0.18.0.min.js"></script>
-    <link rel="stylesheet" href="css/bootstrap-3.3.7.css">
-    <style id="stl">
-        #content div{
-            border: 1px solid rgba(255, 153, 123, 0.45);
-            width: 500px;
-            height: 450px;
-            margin-left: 100px;
-            margin-top: 100px;
-            position: relative;
-        }
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>无标题文档</title>
+  <script language="javascript" src="js/LodopFuncs.js"></script>
+  <script language="javascript" src="js/jquery-3.4.1.js"></script>
+  <script language="javascript" src="js/vue-2.4.0.js"></script>
+  <script language="javascript" src="js/axios-0.18.0.min.js"></script>
+  <link rel="stylesheet" href="css/bootstrap-3.3.7.css">
+  <style id="stl">
+    #content div{
+      border: 1px solid rgba(255, 153, 123, 0.45);
+      width: 500px;
+      height: 450px;
+      margin-left: 100px;
+      margin-top: 100px;
+      position: relative;
+    }
 
-        span{
-            position: absolute;
-            background-color: #ffcab8;
-        }
-    </style>
-    <style>
-        span:hover{
-            cursor: move;
-        }
-    </style>
+    span{
+      position: absolute;
+      background-color: #ffcab8;
+    }
+  </style>
+  <style>
+    span:hover{
+      cursor: move;
+    }
+  </style>
 </head>
 <body>
 <div id="app">
-    <div id="content" @mouseup="end">
-        <div>
+  <div id="content" @mouseup="end" v-show="dataMounted">
+    <div>
             <span v-for="(item,idx) in list" :id="'content'+idx"
-                @mousedown="down(idx)"  @mousemove.capture="move(idx)"  >
+                  @mousedown="down(idx)"  @mousemove.capture="move(idx)"  >
                 {{item.val}}
             </span>
-        </div>
     </div>
-    <a @click.prevent="preview()" class="btn btn-default">预览</a>
+  </div>
+  <a @click.prevent="preview()" class="btn btn-default">预览</a>
 </div>
 
 <script language="javascript" type="text/javascript">
-    var LODOP; //声明为全局变量
+  var LODOP; //声明为全局变量
 
-    var vm = new Vue({
-        el:"#app",
-        data:{
-            list:[],
-            flags:false,
-            position:{x:0,y:0},
-            nx: '', ny: '', dx: '', dy: '', xPum: '', yPum: '',
-        },
-        methods:{
-            preview(){
-                var html = "<style>"+$("#stl").html()+"</style>"
-                html = html+ "<div>"+$("#content").html()+"</div>";
-                LODOP=getLodop();
-                LODOP.PRINT_INIT("打印测试");
-                LODOP.SET_PRINT_STYLE("FontSize",18);
-                LODOP.SET_PRINT_STYLE("Bold",1);
-                LODOP.ADD_PRINT_HTM(100,100,350,600,html);
-                LODOP.PREVIEW();
-            },
-            down(idx){
-                var cnt = document.getElementById("content"+idx);
-                this.flags = true;
-                this.position.x = event.clientX;
-                this.position.y = event.clientY;
-                this.dx = cnt.offsetLeft;
-                this.dy = cnt.offsetTop;
-            },
-            move(idx){
-                if(this.flags){
-                    var cnt = document.getElementById("content"+idx);
-                    let width = $("#content div").width();
-                    let height = $("#content div").height();
-                    this.nx = event.clientX - this.position.x;
-                    this.ny = event.clientY - this.position.y;
-                    this.xPum = this.dx+this.nx;
-                    this.yPum = this.dy+this.ny;
-                    if(this.xPum<0){
-                        this.xPum = - this.xPum;
-                    }
-                    if(this.xPum > width){
-                        this.xPum = width-20;
-                    }
-                    if(this.yPum<0){
-                        this.yPum = - this.yPum;
-                    }
-                    if(this.yPum > height){
-                        this.yPum = height-20;
-                    }
-                    //坐标位置赋值给当前dom元素
-                    cnt.style.left = this.xPum+"px";
-                    cnt.style.top = this.yPum +"px";
-                    //对当前元素的坐标位置持久化
-                    this.list = this.list.map(e=>{
-                     if(e.idx==idx){
-                       e.top = this.yPum;
-                       e.left = this.xPum;
-                     }
-                     return e;
-                   })
-                }
-            },
-            end(){
-                this.flags = false;
+  var vm = new Vue({
+    el:"#app",
+    data:{
+      list:[],
+      flags:false,
+      position:{x:0,y:0},
+      nx: '', ny: '', dx: '', dy: '', xPum: '', yPum: '',
+      dataMounted:false
+    },
+    methods:{
+      preview(){
+        var html = "<style>"+$("#stl").html()+"</style>"
+        html = html+ "<div>"+$("#content").html()+"</div>";
+        LODOP=getLodop();
+        LODOP.PRINT_INIT("打印测试");
+        LODOP.SET_PRINT_STYLE("FontSize",18);
+        LODOP.SET_PRINT_STYLE("Bold",1);
+        LODOP.ADD_PRINT_HTM(100,100,350,600,html);
+        LODOP.PREVIEW();
+      },
+      down(idx){
+        var cnt = document.getElementById("content"+idx);
+        this.flags = true;
+        this.position.x = event.clientX;
+        this.position.y = event.clientY;
+        this.dx = cnt.offsetLeft;
+        this.dy = cnt.offsetTop;
+      },
+      move(idx){
+        if(this.flags){
+          var cnt = document.getElementById("content"+idx);
+          let width = $("#content div").width();
+          let height = $("#content div").height();
+          this.nx = event.clientX - this.position.x;
+          this.ny = event.clientY - this.position.y;
+          this.xPum = this.dx+this.nx;
+          this.yPum = this.dy+this.ny;
+          if(this.xPum<0){
+            this.xPum = - this.xPum;
+          }
+          if(this.xPum > width){
+            this.xPum = width-20;
+          }
+          if(this.yPum<0){
+            this.yPum = - this.yPum;
+          }
+          if(this.yPum > height){
+            this.yPum = height-20;
+          }
+          //坐标位置赋值给当前dom元素
+          cnt.style.left = this.xPum+"px";
+          cnt.style.top = this.yPum +"px";
+          //对当前元素的坐标位置持久化
+          this.list = this.list.map(e=>{
+            if(e.idx==idx){
+              e.top = this.yPum;
+              e.left = this.xPum;
             }
-        },
-        mounted(){
-            console.info("mounted=======================")
-            this.list.forEach((e,idx)=>{
-                var cnt = document.getElementById("content"+idx);
-                cnt.style.left = e.left+"px";
-                cnt.style.top = e.top+"px";
-            })
-        },
-        created() {
-          console.info("created=======================")
-          //后台获取所有打印元素
-          let url = "https://www.easy-mock.com/mock/5d09930224add5128091e046/example/lodop/printData";
-          axios
-            .get(url)
-            .then(res =>{this.list = res.data.data.content})
-            .catch(error=>console.log(error));
+            return e;
+          })
         }
-    });
+      },
+      end(){
+        this.flags = false;
+      },
+      async getData(){ //远程获取打印元素初始状态值
+        let url = "https://www.easy-mock.com/mock/5d09930224add5128091e046/example/lodop/printData";
+        var r = await axios.get(url)
+        this.list = r.data.data.content
+      }
+    },
+    mounted(){
+      //异步化
+     /* while(this.list.length<=0){*/
+        setTimeout(()=>{
+          this.list.forEach((e,idx)=>{
+            var cnt = document.getElementById("content"+idx);
+            cnt.style.left = e.left+"px";
+            cnt.style.top = e.top+"px";
+          })
+          this.dataMounted=true;
+        },3000)
+      /*}*/
+
+    },
+    created() {
+      this.getData()
+    }
+  });
 </script>
 </body>
 </html>
