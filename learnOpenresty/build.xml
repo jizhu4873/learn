@@ -5,7 +5,7 @@
         run Openresty
     </description>
     <property name="openresty-home" location="D:\app\openresty-1.13.6.2-win64"/>
-    <property name="conf" location="${basedir}/conf"/>
+    <property name="conf" location="/conf-bak"/>
     <property name="src" location="${basedir}/src"/>
     <property name="target-conf" location="${openresty-home}/conf"/>
     <property name="target-src" location="${openresty-home}/my-lua"/>
@@ -25,7 +25,7 @@
     <target name="copy" depends="init" description="generate the distribution" >
         <echo>复制安装文件</echo>
         <copy todir="${target-conf}">
-            <fileset dir="${conf}"></fileset>
+            <fileset dir="/conf-bak"></fileset>
         </copy>
         <copy todir="${target-src}">
             <fileset dir="${src}"></fileset>
