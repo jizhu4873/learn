@@ -1,7 +1,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>无标题文档</title>
+  <title>南航电子行程单</title>
   <script language="javascript" src="js/LodopFuncs.js"></script>
   <script language="javascript" src="js/jquery-3.4.1.js"></script>
   <script language="javascript" src="js/vue-2.4.0.js"></script>
@@ -11,16 +11,15 @@
     #content div{
       border: 1px solid rgba(255, 153, 123, 0.45);
       width: 996px;
-      height: 762px;
-      margin-left: 20px;
-      margin-top: 100px;
+      height: 383px;
+      margin: 20px auto;
       position: relative;
       background: url(./images/ins.jpg) no-repeat scroll 0 0;
     }
 
-    span{
+    span {
       position: absolute;
-      font-size: 22px;
+      font-size: 12px;
       font-family: "Microsoft YaHei";
       font-weight: bold;
     }
@@ -28,6 +27,16 @@
   <style>
     span:hover{
       cursor: move;
+    }
+    a {
+      margin: 26px auto;
+      display: block !important;
+      width: 500px;
+      height: 80px;
+      line-height: 80px !important;
+      font-size: 45px !important;
+      padding: 0px !important;
+      color: #6d7d7db3 !important;
     }
   </style>
 </head>
@@ -41,7 +50,7 @@
             </span>
     </div>
   </div>
-  <a @click.prevent="preview()" class="btn btn-default">预览</a>
+  <a @click.prevent="preview()" class="btn btn-default">预览打印</a>
 </div>
 
 <script language="javascript" type="text/javascript">
@@ -64,7 +73,7 @@
         LODOP.PRINT_INIT("打印测试");
         LODOP.SET_PRINT_STYLE("FontSize",18);
         LODOP.SET_PRINT_STYLE("Bold",1);
-        LODOP.ADD_PRINT_HTM(100,100,350,600,html);
+        LODOP.ADD_PRINT_HTM(100,0,996,390,html);
         LODOP.PREVIEW();
       },
       down(idx){
