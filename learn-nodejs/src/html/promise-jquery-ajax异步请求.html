@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jqurey-ajax请求</title>
+    <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+
+</head>
+<body>
+<button id="btn">异步请求</button>
+</body>
+<script>
+    $("#btn").on("click",()=>{
+        $.ajax({
+            url:"../json/data.json",
+            type:"get",
+            dataType:"json",
+            success:data=>{
+                console.info(data)
+            }
+        })
+    })
+</script>
+</html>

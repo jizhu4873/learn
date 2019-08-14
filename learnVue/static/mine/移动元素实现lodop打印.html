@@ -6,7 +6,7 @@
   <script language="javascript" src="js/jquery-3.4.1.js"></script>
   <script language="javascript" src="js/vue-2.4.0.js"></script>
   <script language="javascript" src="js/axios-0.18.0.min.js"></script>
-  <link rel="stylesheet" href="css/bootstrap-3.3.7.css">
+  <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet">
   <style id="stl">
     #content div{
       border: 1px solid rgba(255, 153, 123, 0.45);
@@ -41,6 +41,7 @@
   </style>
 </head>
 <body>
+<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
 <div id="app">
   <div id="content" @mouseup="end" v-show="dataMounted">
     <div>
@@ -50,7 +51,7 @@
             </span>
     </div>
   </div>
-  <a @click.prevent="preview()" class="btn btn-default">预览打印</a>
+  <a @click.prevent="preview()" class="btn btn-default">打印<span class="glyphicon glyphicon-class" aria-hidden="true"></span></a>
 </div>
 
 <script language="javascript" type="text/javascript">
