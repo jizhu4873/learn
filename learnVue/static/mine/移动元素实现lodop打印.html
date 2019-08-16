@@ -12,11 +12,12 @@
   <style id="stl">
     #printContent{
       border: 1px solid rgba(255, 153, 123, 0.45);
-      width: 996px;
-      height: 383px;
-      margin: 20px auto;
+      width: 210mm;
+      height: 100mm;
+      margin: 5px auto;
       position: relative;
-      background: url(./images/ins.jpg) no-repeat scroll 0 0;
+      background-image: url(./images/ins.jpg);
+      background-size: 100% 100%;
     }
 
     #printContent span {
@@ -27,11 +28,20 @@
     }
   </style>
   <style>
-    #app div.block{
+    .topBox{
       width: 996px;
-      margin: 20px auto;
+      margin: 0px auto;
+      height: 38px;
     }
-    #content div span span:hover{
+    .mainBox{
+      width: 1266px;
+      margin: 0px auto;
+    }
+    .bottomBox{
+      margin: 0px auto;
+      width: 400px;
+    }
+    #printContent span:hover{
       cursor: move;
     }
     #printBtn {
@@ -51,18 +61,54 @@
     #verticalSlider{
       position: absolute;
     }
+    #verticalSlider {
+      position: absolute;
+      margin-left: 60px !important;
+    }
+    .switchContainer{
+      margin: 0 auto;
+      width: 400px;
+    }
+    #sliderSwitch{
+      margin-left: 25px;
+      width: 200px;
+      float: left;
+    }
+    #sliderSwitch div span span{
+      line-height: unset !important;
+    }
+    #movePrintContentSwitch{
+      float: left;
+    }
+    #movePrintContentSwitch div span span{
+      line-height: unset !important;
+    }
+
+    /*动画过渡*/
+    .fade-enter-active, .fade-leave-active {
+      transition: opacity 1.8s;
+    }
+    .fade-enter, .fade-leave-to {
+      opacity: 0;
+    }
   </style>
 </head>
 <body>
 <div id="app">
-  <div class="block" id="horizonSlider">
-    <el-slider v-model="movePrintPaperHorizon" :min="-200" :max="300" style="width: 80%;margin-right: 20px;"></el-slider>
+  <div class="topBox">
+    <transition name="fade">
+    <div v-show="sliderSwitch" id="horizonSlider">
+      <el-slider v-model="movePrintPaperHorizon" :min="-200" :max="300" style="width: 100%;margin-right: 20px;"></el-slider>
+    </div>
+    </transition>
   </div>
-  <div class="block" id="verticalSlider">
-    <el-slider v-model="movePrintPaperVertical" vertical height="400px" :min="-300" :max="500">
-    </el-slider>
-  </div>
-  <div id="content" @mouseup="end" v-show="dataMounted">
+  <div class="mainBox">
+    <transition name="fade">
+      <div v-show="sliderSwitch" id="verticalSlider">
+      <el-slider v-model="movePrintPaperVertical" vertical height="380px" :min="-300" :max="500"></el-slider>
+    </div>
+    </transition>
+    <div id="content" @mouseup="end" v-show="dataMounted">
     <div id="printContent">
             <span v-for="(item,idx) in list" :id="'content'+idx"
                   @mousedown="down(idx)"  @mousemove.capture="move(idx)"  >
@@ -70,7 +116,26 @@
             </span>
     </div>
   </div>
-  <a id="printBtn" @click.prevent="preview()" class="btn btn-default">打印<span class="glyphicon glyphicon-print" aria-hidden="true"></span></a>
+  </div>
+  <div class="bottomBox">
+    <a id="printBtn" @click.prevent="preview()" class="btn btn-default">打印<span class="glyphicon glyphicon-print" aria-hidden="true"></span></a>
+    <!--打印纸张调整开关-->
+    <div class="switchContainer">
+    <div id="sliderSwitch">
+      <el-switch v-model="sliderSwitch" active-text="打印纸张位置调整"></el-switch>
+    </div>
+    <div id="movePrintContentSwitch">
+      <el-popover ref="popover1"
+        placement="top-start"
+        width="200"
+        trigger="hover"
+        title="操作办法"
+        content="鼠标放到行程单上，点击要移动的文字，然后拖动即可（鼠标保持点击状态）">
+      </el-popover>
+      <el-switch v-popover:popover1 v-model="movePrintContentSwitch" active-text="打印文字位置调整"></el-switch>
+    </div>
+  </div>
+  </div>
 </div>
 
 <script language="javascript" type="text/javascript">
@@ -85,7 +150,9 @@
       nx: '', ny: '', dx: '', dy: '', xPum: '', yPum: '',
       dataMounted:false,
       movePrintPaperHorizon:15,
-      movePrintPaperVertical:50
+      movePrintPaperVertical:50,
+      sliderSwitch:false,
+      movePrintContentSwitch:false
     },
     methods:{
       preview(){
@@ -97,11 +164,15 @@
         LODOP.SET_PRINT_STYLE("Bold",1);
         //ADD_PRINT_HTM(intTop,intLeft,intWidth,intHeight,strHtml)
         LODOP.ADD_PRINT_HTM(this.movePrintPaperVertical,this.movePrintPaperHorizon,996,390,html);
+        //LODOP.SET_PRINT_PAGESIZE(intOrient,intPageWidth,intPageHeight,strPageName);
+        //1---纵向打印，固定纸张；
+        LODOP.SET_PRINT_PAGESIZE(1,2100,1000,"行程单");
         LODOP.PREVIEW();
       },
       down(idx){
         var cnt = document.getElementById("content"+idx);
-        this.flags = true;
+        if(this.movePrintContentSwitch)
+          this.flags = true;
         this.position.x = event.clientX;
         this.position.y = event.clientY;
         this.dx = cnt.offsetLeft;

@@ -9,9 +9,12 @@
 
        <!--六宫格-->
        <ul class="mui-table-view mui-grid-view mui-grid-9">
-           <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
-               <img src="../../images/menu1.png">
-               <div class="mui-media-body">新闻资讯</div></a></li>
+           <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+               <router-link to="/home/news">
+                   <img src="../../images/menu1.png">
+                   <div class="mui-media-body">新闻资讯</div>
+               </router-link>
+           </li>
            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
                <img src="../../images/menu2.png">
                <div class="mui-media-body">图片分享</div></a></li>
@@ -32,17 +35,15 @@
 </template>
 
 <script>
-    import axios from "axios"
-
     export default {
-        name: "home.vue",
+        name: "home",
         data(){
             return {lunbos:[]}
         },
         methods:{
             getLunbo(){
-                axios
-                    .get('https://www.easy-mock.com/mock/5d09930224add5128091e046/example/vue/lunbo')
+                this.$axios
+                    .get('/lunbo')
                     .then(res => (this.lunbos=res.data.data))
                     .catch(function (error) {
                         console.log(error);

@@ -14,11 +14,8 @@
         $.ajax({
             url:"../json/data.json",
             type:"get",
-            dataType:"json",
-            success:data=>{
-                console.info(data)
-            }
-        })
+            dataType:"json"
+        }).then(r=>console.info(r))
     })
 </script>
 </html>

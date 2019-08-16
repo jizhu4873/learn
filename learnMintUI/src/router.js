@@ -4,6 +4,7 @@ import home from "./components/tabbar/home.vue"
 import member from "./components/tabbar/member.vue"
 import cart from "./components/tabbar/cart.vue"
 import search from "./components/tabbar/search.vue"
+import news from "./components/news/news.vue"
 
 
 // 3. 创建路由对象
@@ -13,7 +14,8 @@ var router = new VueRouter({
     { path: '/home', component: home },
     { path: '/member', component: member },
     { path: '/cart', component: cart },
-    { path: '/search', component: search }
+    { path: '/search', component: search },
+    {path:'/home/news',component:news}
   ],
   linkActiveClass:"mui-active"
 })
