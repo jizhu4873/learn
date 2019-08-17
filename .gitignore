@@ -27,3 +27,6 @@ classes/
 *.iws
 *.iml
 *.ipr
+/learnOpenresty/logs/access.log
+/learnOpenresty/logs/error.log
+/learnspringboot/.gitignore

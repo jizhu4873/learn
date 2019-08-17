@@ -36,6 +36,7 @@
 .my-container{
   padding-top: 40px;
   overflow-x: hidden;
+  padding-bottom: 51px;
 }
 .fade-enter-active, .fade-leave-active {
   transition: all .5s ease;
