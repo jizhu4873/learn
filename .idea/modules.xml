@@ -3,10 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/learnLua/learnLua.iml" filepath="$PROJECT_DIR$/learnLua/learnLua.iml" />
-      <module fileurl="file://$PROJECT_DIR$/learnMintUI/learnMintUI.iml" filepath="$PROJECT_DIR$/learnMintUI/learnMintUI.iml" />
       <module fileurl="file://$PROJECT_DIR$/learnOpenresty/learnOpenresty.iml" filepath="$PROJECT_DIR$/learnOpenresty/learnOpenresty.iml" />
       <module fileurl="file://$PROJECT_DIR$/learnVue/learnVue.iml" filepath="$PROJECT_DIR$/learnVue/learnVue.iml" />
-      <module fileurl="file://$PROJECT_DIR$/learnWebpack/learnWebpack.iml" filepath="$PROJECT_DIR$/learnWebpack/learnWebpack.iml" />
     </modules>
   </component>
 </project>
