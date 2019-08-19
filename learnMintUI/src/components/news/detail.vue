@@ -6,12 +6,14 @@
             <span>点击: {{detail.click}} 次</span>
         </p>
         <hr/>
-        <div class="detail" v-html="detail.content">
-        </div>
+        <div class="detail" v-html="detail.content"></div>
+        <comment-box></comment-box>
     </div>
 </template>
 
 <script>
+    import comment from "../comment/comment.vue"
+
     export default {
         name: "detail",
         data(){
@@ -29,6 +31,9 @@
                     this.detail = r.data.msg[0]
                 })
             }
+        },
+        components:{
+            "comment-box":comment
         }
     }
 </script>

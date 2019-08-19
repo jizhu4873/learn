@@ -4,7 +4,7 @@ import router from "./router.js"
 import axios from "axios"
 import moment from "moment" //时间插件
 
-import { Header,Swipe, SwipeItem } from 'mint-ui';
+import { Header,Swipe, SwipeItem ,Button} from 'mint-ui';
 
 import "./lib/mui/css/mui.min.css"
 import "./lib/mui/css/icons-extra.css"
@@ -14,6 +14,7 @@ import app from "./App.vue"
 Vue.component(Header.name, Header);
 Vue.component(Swipe.name, Swipe);
 Vue.component(SwipeItem.name, SwipeItem);
+Vue.component(Button.name, Button);
 
 Vue.use(VueRouter)
 

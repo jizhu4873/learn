@@ -10,11 +10,15 @@
   <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
   <script src="https://unpkg.com/element-ui/lib/index.js"></script>
   <style id="stl">
-    #printContent{
-      border: 1px solid rgba(255, 153, 123, 0.45);
+    #printBox{
       width: 210mm;
-      height: 100mm;
+      height: 101mm;
       margin: 5px auto;
+    }
+    #printContent{
+      width: 198mm;
+      height: 92mm;
+      margin: 0mm 7mm 9mm 5mm;
       position: relative;
       background-image: url(./images/ins.jpg);
       background-size: 100% 100%;
@@ -28,13 +32,17 @@
     }
   </style>
   <style>
+    #printBox {
+      border: 1px solid rgba(137, 103, 73, 0.45);
+    }
+
     .topBox{
-      width: 996px;
+      width: 210mm;
       margin: 0px auto;
       height: 38px;
     }
     .mainBox{
-      width: 1266px;
+      width: 230mm;
       margin: 0px auto;
     }
     .bottomBox{
@@ -58,12 +66,8 @@
       font-size: 32px;
       padding: 10px;
     }
-    #verticalSlider{
-      position: absolute;
-    }
     #verticalSlider {
       position: absolute;
-      margin-left: 60px !important;
     }
     .switchContainer{
       margin: 0 auto;
@@ -109,11 +113,13 @@
     </div>
     </transition>
     <div id="content" @mouseup="end" v-show="dataMounted">
-    <div id="printContent">
-            <span v-for="(item,idx) in list" :id="'content'+idx"
-                  @mousedown="down(idx)"  @mousemove.capture="move(idx)"  >
-                {{item.val}}
-            </span>
+    <div id="printBox">
+      <div id="printContent">
+              <span v-for="(item,idx) in list" :id="'content'+idx"
+                    @mousedown="down(idx)"  @mousemove.capture="move(idx)"  >
+                  {{item.val}}
+              </span>
+      </div>
     </div>
   </div>
   </div>
@@ -166,7 +172,7 @@
         LODOP.ADD_PRINT_HTM(this.movePrintPaperVertical,this.movePrintPaperHorizon,996,390,html);
         //LODOP.SET_PRINT_PAGESIZE(intOrient,intPageWidth,intPageHeight,strPageName);
         //1---纵向打印，固定纸张；
-        LODOP.SET_PRINT_PAGESIZE(1,2100,1000,"行程单");
+        LODOP.SET_PRINT_PAGESIZE(1,2100,1010,"行程单");
         LODOP.PREVIEW();
       },
       down(idx){
