@@ -1,2 +1,2 @@
-ngx.sleep(10)
+ngx.sleep(1)
 ngx.say("hello world")
