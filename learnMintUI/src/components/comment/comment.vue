@@ -2,29 +2,31 @@
    <div class="comment-container">
        <h4>发表评论</h4>
        <hr/>
-       <textarea maxlength="120" placeholder="请输入要BB的内容(最多120字)"></textarea>
-       <mt-button type="primary" size="large">发表评论</mt-button>
+       <textarea maxlength="120" placeholder="请输入要BB的内容(最多120字)" v-model="comment"></textarea>
+       <mt-button type="primary" size="large" @click="postComment">发表评论</mt-button>
        <div class="comment-box">
            <div v-for="(d,i) in comments" :key="d.add_time" class="comment-item">
             <div class="comment-title">
-               第{{i+1}}楼&nbsp;&nbsp;{{d.user_name}}&nbsp;&nbsp;发表时间:{{d.add_time}}
+               第{{i+1}}楼&nbsp;&nbsp;{{d.user_name}}&nbsp;&nbsp;发表时间:{{d.add_time|dateFmt}}
             </div>
             <div class="comment-content">
                 {{d.content}}
             </div>
            </div>
        </div>
-       <mt-button type="danger" plain size="large">加载更多</mt-button>
+       <mt-button type="danger" plain size="large" @click="getMore">加载更多</mt-button>
    </div>
 </template>
 
 <script>
+    import {Toast} from "mint-ui"
     export default {
         name: "comment",
         data(){
             return {
                 comments:[],
-                pageIndex:1
+                pageIndex:1,
+                comment:""
             }
         },
         created(){
@@ -33,9 +35,20 @@
         methods:{
             getComments(){
                 let url="/getComments/"+this.id+"?pageIndex="+this.pageIndex;
-                console.info("======="+url)
                 this.$axios.get(url).then(r=>{
-                    this.comments=r.data.msg;
+                    this.comments=this.comments.concat(r.data.msg);
+                })
+            },
+            getMore(){
+                this.pageIndex++;
+                this.getComments();
+            },
+            postComment(){
+                if(!this.comment){
+                    return Toast("评论不能为空")
+                }
+                this.$axios.post("/postComment/"+this.$route.params.id,{content:this.comment}).then(r=>{
+                    this.comments.unshift({"user_name":"匿名用户","add_time":Date.now(),"content":this.comment})
                 })
             }
         },

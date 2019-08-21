@@ -27,7 +27,6 @@
             getNews(){
                 this.$axios.get("/getNews")
                     .then(r=>{
-                        console.info(r)
                         this.news=r.data.msg
                     })
             }
