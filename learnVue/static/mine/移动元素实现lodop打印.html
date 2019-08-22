@@ -16,6 +16,7 @@
 
     #printBox{
       border: 1px solid rgba(137, 103, 73, 0.45);
+      /* 210*101mm -> 792*380px */
       width: 210mm;
       height: 101mm;
       margin: 5px 0px;
@@ -42,12 +43,12 @@
     }
 
     .topBox{
-      width: 210mm;
+      width: 792px;
       margin: 0px auto;
       height: 38px;
     }
     .mainBox{
-      width: 230mm;
+      width: 1200px;
       margin: 0px auto;
     }
     .bottomBox{
@@ -161,7 +162,7 @@
       nx: '', ny: '', dx: '', dy: '', xPum: '', yPum: '',
       dataMounted:false,
       movePrintPaperHorizon:0,
-      movePrintPaperVertical:50,
+      movePrintPaperVertical:0,
       sliderSwitch:false,
       movePrintContentSwitch:false
     },
@@ -175,7 +176,7 @@
         LODOP.SET_PRINT_STYLE("Bold",1);
         //ADD_PRINT_HTM(intTop,intLeft,intWidth,intHeight,strHtml)
         console.info(html)
-        LODOP.ADD_PRINT_HTM(this.movePrintPaperVertical,this.movePrintPaperHorizon,"210mm","101mm",html);
+        LODOP.ADD_PRINT_HTM(this.movePrintPaperVertical,this.movePrintPaperHorizon,"210mm","279mm",html);
         //LODOP.SET_PRINT_PAGESIZE(intOrient,intPageWidth,intPageHeight,strPageName);
         //1---纵向打印，固定纸张；
         LODOP.SET_PRINT_PAGESIZE(1,0,0,"A4");
@@ -212,8 +213,8 @@
             this.yPum = height-20;
           }
           //坐标位置赋值给当前dom元素
-          cnt.style.left = this.xPum+"mm";
-          cnt.style.top = this.yPum +"mm";
+          cnt.style.left = this.xPum+"px";
+          cnt.style.top = this.yPum +"px";
           //对当前元素的坐标位置持久化
           this.list = this.list.map(e=>{
             if(e.idx==idx){
@@ -237,8 +238,8 @@
         setTimeout(()=>{
           this.list.forEach((e,idx)=>{
             var cnt = document.getElementById("content"+idx);
-            cnt.style.left = e.left+"mm";
-            cnt.style.top = e.top+"mm";
+            cnt.style.left = e.left+"px";
+            cnt.style.top = e.top+"px";
           })
           this.dataMounted=true;
         },200)
