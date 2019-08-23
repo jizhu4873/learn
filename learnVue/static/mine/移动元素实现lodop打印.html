@@ -213,8 +213,8 @@
             this.yPum = height-20;
           }
           //坐标位置赋值给当前dom元素
-          cnt.style.left = this.xPum+"px";
-          cnt.style.top = this.yPum +"px";
+          cnt.style.left = this.xPum+"mm";
+          cnt.style.top = this.yPum +"mm";
           //对当前元素的坐标位置持久化
           this.list = this.list.map(e=>{
             if(e.idx==idx){
@@ -231,6 +231,31 @@
       getData(){ //远程获取打印元素初始状态值
         let url = "json/print-item-metadata.json";
         axios.get(url).then(r=>this.list = r.data.data.content)
+      },
+      getDPI(){
+        var arrDPI = new Array;
+        if (window.screen.deviceXDPI) { //ie9
+          arrDPI[0] = window.screen.deviceXDPI;
+          arrDPI[1] = window.screen.deviceYDPI;
+        } else {
+          var tmpNode = document.createElement("DIV");
+          tmpNode.style.cssText = "width:1in;height:1in;position:absolute;left:0px;top:0px;z-index:99;visibility:hidden";
+          document.body.appendChild(tmpNode);
+          arrDPI[0] = parseInt(tmpNode.offsetWidth);
+          arrDPI[1] = parseInt(tmpNode.offsetHeight);
+          tmpNode.parentNode.removeChild(tmpNode);
+        }
+        return arrDPI;
+      },
+      px2mm(val){ //  px转换为mm
+        var inch = val/this.getDPI()[0];
+        var c_value = inch * 25.4;
+        return c_value;
+      },
+      mm2px(val){ //  mm转换为px
+        var inch = value/25.4;
+        var c_value = inch*this.getDPI()[0];
+        return c_value;
       }
     },
     mounted(){
@@ -238,8 +263,8 @@
         setTimeout(()=>{
           this.list.forEach((e,idx)=>{
             var cnt = document.getElementById("content"+idx);
-            cnt.style.left = e.left+"px";
-            cnt.style.top = e.top+"px";
+            cnt.style.left = e.left+"mm";
+            cnt.style.top = e.top+"mm";
           })
           this.dataMounted=true;
         },200)
