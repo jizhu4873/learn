@@ -37,4 +37,5 @@ function get_from_redis(key)
 end
 
 local res = get_from_redis("dog")
+-- local res = get_from_cache("dog")
 ngx.say(res)
