@@ -7,21 +7,27 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="learnHadoop" />
-        <module name="learnSpark" />
         <module name="learnJava" />
+        <module name="learnHadoop" />
+        <module name="learnspringboot" />
+        <module name="learnSpark (2)" />
+        <module name="learnSpark" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8">
+      <module name="learn" target="1.8" />
+      <module name="learnHadoop" target="1.5" />
+      <module name="learnJava" target="1.8" />
+      <module name="learnSpark" target="1.8" />
       <module name="learnSpark (1)" target="1.8" />
       <module name="learnSpark (2)" target="1.8" />
+      <module name="learnspringboot" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="learnHadoop" options="-parameters" />
-      <module name="learnSpark" options="" />
-      <module name="learnSpark (2)" options="-parameters" />
+      <module name="learnJava" options="-parameters" />
+      <module name="learnspringboot" options="-parameters" />
     </option>
   </component>
 </project>

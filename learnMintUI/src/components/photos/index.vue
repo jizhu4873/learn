@@ -10,10 +10,16 @@
             </div>
 
         </div>
-        <ul>
-            <li v-for="item in list" :key="item.id">
+        <ul class="photo-list">
+            <router-link tag="li" :to="'/home/photo/'+item.id" v-for="item in list" :key="item.id">
                 <img v-lazy="item.img_url">
-            </li>
+                <div class="info">
+                    <h4 class="info-title">{{item.title}}</h4>
+                    <div class="info-content">
+                        {{item.summary}}
+                    </div>
+                </div>
+            </router-link>
         </ul>
     </div>
 </template>
@@ -59,11 +65,43 @@
 *{
     touch-action:pan-y;
 }
+.photo-list{
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+    padding-bottom: 6px;
+    text-align: center;
+    li{
+        position: relative;
+        background-color: #ccc;
+        margin-bottom:10px ;
+        box-shadow: 0px 0px 9px #999999;
+        img{
+           width: 100%;
+            vertical-align: middle;
+       }
+       img[lazy="loading"] {
+           width: 40px;
+           height: 300px;
+           margin: auto;
+       }
 
-img[lazy="loading"] {
-    width: 40px;
-    height: 300px;
-    margin: auto;
+        .info{
+            position: absolute;
+            bottom: 0px;
+            background-color: rgba(0, 0, 0, 0.26);
+            color: white;
+            max-height: 85px;
+            text-align: left;
+            .info-title{
+                font-size: 14px;
+            }
+            .info-content{
+                font-size: 13px;
+            }
+        }
+   }
 }
+
 
 </style>

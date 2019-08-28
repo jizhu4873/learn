@@ -39,21 +39,21 @@
   </style>
   <style>
     #printBox {
-      border: 1px solid rgba(137, 103, 73, 0.45);
+      /*border: 1px solid rgba(137, 103, 73, 0.45);*/
     }
 
     .topBox{
-      width: 792px;
+      width: 210mm;
       margin: 0px auto;
       height: 38px;
     }
     .mainBox{
-      width: 1200px;
+      width: 230mm;
       margin: 0px auto;
     }
     .bottomBox{
       margin: 0px auto;
-      width: 400px;
+      width: 600px;
     }
     #printContent span:hover{
       cursor: move;
@@ -77,11 +77,11 @@
     }
     .switchContainer{
       margin: 0 auto;
-      width: 400px;
+      width: 500px;
     }
     #sliderSwitch{
       margin-left: 25px;
-      width: 200px;
+      width: 250px;
       float: left;
     }
     #sliderSwitch div span span{
@@ -196,21 +196,26 @@
           var cnt = document.getElementById("content"+idx);
           let width = $("#content div").width();
           let height = $("#content div").height();
+          // px->mm
+          width = this.px2mm(width)
+          height = this.px2mm(height)
           this.nx = event.clientX - this.position.x;
           this.ny = event.clientY - this.position.y;
           this.xPum = this.dx+this.nx;
           this.yPum = this.dy+this.ny;
+          this.xPum = this.px2mm(this.xPum)
+          this.yPum = this.px2mm(this.yPum)
           if(this.xPum<0){
             this.xPum = - this.xPum;
           }
           if(this.xPum > width){
-            this.xPum = width-20;
+            this.xPum = width-1;
           }
           if(this.yPum<0){
             this.yPum = - this.yPum;
           }
           if(this.yPum > height){
-            this.yPum = height-20;
+            this.yPum = height-1;
           }
           //坐标位置赋值给当前dom元素
           cnt.style.left = this.xPum+"mm";

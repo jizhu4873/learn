@@ -7,6 +7,7 @@ import search from "./components/tabbar/search.vue"
 import news from "./components/news/news.vue"
 import detail from "./components/news/detail.vue"
 import photos from "./components/photos/index.vue"
+import photo from "./components/photos/photoDetail.vue"
 
 
 // 3. 创建路由对象
@@ -19,7 +20,8 @@ var router = new VueRouter({
     { path: '/search', component: search },
     {path:'/home/news',component:news},
     {path:'/home/news/detail/:id',component:detail},
-    {path:'/home/photos',component:photos}
+    {path:'/home/photos',component:photos},
+    {path:'/home/photo/:id',component:photo}
   ],
   linkActiveClass:"mui-active"
 })

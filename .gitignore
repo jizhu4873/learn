@@ -30,3 +30,5 @@ classes/
 /learnOpenresty/logs/access.log
 /learnOpenresty/logs/error.log
 /learnspringboot/.gitignore
+/learnSpark/target
+/learnHadoop/target
