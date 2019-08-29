@@ -1,17 +1,23 @@
 package com.haanoo;
 
+import ch.qos.logback.core.util.FileUtil;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.alibaba.fastjson.support.hsf.HSFJSONUtils;
+import lombok.Data;
+import org.apache.commons.io.IOUtils;
 import org.junit.Test;
 
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 public class EditJsonContent {
-    String origin = "{\n" +
-            "  \"data\": {\n" +
-            "    \"content\": [\n" +
+    String origin = "[\n" +
             "      {\n" +
             "        \"idx\": 0,\n" +
             "        \"val\": \"吴峰\",\n" +
@@ -204,15 +210,29 @@ public class EditJsonContent {
             "        \"left\": 655,\n" +
             "        \"top\": 323\n" +
             "      }\n" +
-            "    ]\n" +
-            "  }\n" +
-            "}\n";
+            "    ]";
     @Test
-    public void editContent(){
-        Object parse = JSON.parse(origin);
-        Map map1 = JSON.parseObject(origin, Map.class);
-        System.out.println(map1);
+    public void editContent() throws Exception {
+        List<PositionObj> ps = JSON.parseArray(origin, PositionObj.class);
+        List<PositionObj> newList = ps.stream().map(p -> {
+            PositionObj newP = new PositionObj();
+            newP.setIdx(p.getIdx());
+            newP.setTop(p.getTop() / 3.78);
+            newP.setLeft(p.getLeft() / 3.78);
+            newP.setVal(p.getVal());
+            return newP;
+        }).collect(Collectors.toList());
+        String s = JSON.toJSONString(newList, true);
+        IOUtils.write(s,new FileOutputStream("C://1.txt"));
     }
 
 
+}
+
+@Data
+class PositionObj{
+    private String idx;
+    private Double top;
+    private Double left;
+    private String val;
 }

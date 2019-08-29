@@ -32,8 +32,8 @@
 
     #printContent span {
       position: absolute;
-      font-size: 12px;
-      font-family: "Microsoft YaHei";
+      font-size: 13px;
+      font-family: "宋体";
       font-weight: bold;
     }
   </style>
@@ -50,6 +50,7 @@
     .mainBox{
       width: 230mm;
       margin: 0px auto;
+      display: flex;
     }
     .bottomBox{
       margin: 0px auto;
@@ -73,7 +74,6 @@
       padding: 10px;
     }
     #verticalSlider {
-      position: absolute;
     }
     .switchContainer{
       margin: 0 auto;
@@ -173,7 +173,7 @@
         LODOP=getLodop();
         LODOP.PRINT_INIT("");
         //LODOP.SET_PRINT_STYLE("FontSize",18);
-        LODOP.SET_PRINT_STYLE("Bold",1);
+        //LODOP.SET_PRINT_STYLE("Bold",1);
         //ADD_PRINT_HTM(intTop,intLeft,intWidth,intHeight,strHtml)
         console.info(html)
         LODOP.ADD_PRINT_HTM(this.movePrintPaperVertical,this.movePrintPaperHorizon,"210mm","279mm",html);
