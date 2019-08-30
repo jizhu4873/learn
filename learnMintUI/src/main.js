@@ -3,6 +3,7 @@ import VueRouter from "vue-router"
 import router from "./router.js"
 import axios from "axios"
 import moment from "moment" //时间插件
+import VuePreview from 'vue-preview'
 
 import MintUI from 'mint-ui';
 
@@ -16,6 +17,7 @@ import app from "./App.vue"
 
 Vue.use(VueRouter)
 Vue.use(MintUI)
+Vue.use(VuePreview)
 
  Vue.filter("dateFmt",(dateStr,pattern="YYYY-MM-DD HH:mm")=>{
      return moment(dateStr).format(pattern)

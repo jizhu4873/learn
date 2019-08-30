@@ -11,7 +11,7 @@ public class SteamDemo {
         list.add("赵敏");
         list.add("张强");
         list.add("张三丰");
-        list.stream().filter(s->s.startsWith("张")).forEach(System.out::println);
+        list.stream().filter(s->!s.startsWith("a")).forEach(System.out::println);
     }
 
 }
