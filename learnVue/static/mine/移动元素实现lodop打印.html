@@ -26,15 +26,12 @@
       height: 101mm;
       margin: 0;
       position: relative;
-      background-image: url(./images/travel-no-bottom.jpg);
+      background-image: url(./images/new-splitted.jpg);
       background-size: 100% 100%;
     }
 
     #printContent span {
       position: absolute;
-      font-size: 13px;
-      font-family: "宋体";
-      font-weight: bold;
     }
   </style>
   <style>
@@ -121,10 +118,11 @@
     <div id="content" @mouseup="end" v-show="dataMounted">
     <div id="printBox">
       <div id="printContent">
-              <span v-for="(item,idx) in list" :id="'content'+idx"
-                    @mousedown="down(idx)"  @mousemove.capture="move(idx)"  >
-                  {{item.val}}
-              </span>
+          <span v-for="(item,idx) in list" :id="item.id" :key="item.id" @mousedown="down(item.id)"
+                @mousemove.capture="move(item.id)"
+                :style="item.style">
+              {{item.val}}
+          </span>
       </div>
     </div>
   </div>
@@ -182,8 +180,8 @@
         LODOP.SET_PRINT_PAGESIZE(1,0,0,"A4");
         LODOP.PREVIEW();
       },
-      down(idx){
-        var cnt = document.getElementById("content"+idx);
+      down(id){
+        var cnt = document.getElementById(id);
         if(this.movePrintContentSwitch)
           this.flags = true;
         this.position.x = event.clientX;
@@ -191,9 +189,9 @@
         this.dx = cnt.offsetLeft;
         this.dy = cnt.offsetTop;
       },
-      move(idx){
+      move(id){
         if(this.flags){
-          var cnt = document.getElementById("content"+idx);
+          var cnt = document.getElementById(id);
           let width = $("#content div").width();
           let height = $("#content div").height();
           // px->mm
@@ -222,7 +220,7 @@
           cnt.style.top = this.yPum +"mm";
           //对当前元素的坐标位置持久化
           this.list = this.list.map(e=>{
-            if(e.idx==idx){
+            if(e.id==id){
               e.top = this.yPum;
               e.left = this.xPum;
             }
@@ -234,7 +232,7 @@
         this.flags = false;
       },
       getData(){ //远程获取打印元素初始状态值
-        let url = "json/print-item-metadata.json";
+        let url = "json/print-item-metadata-right.json";
         axios.get(url).then(r=>this.list = r.data.data.content)
       },
       getDPI(){
@@ -267,7 +265,7 @@
       //异步化
         setTimeout(()=>{
           this.list.forEach((e,idx)=>{
-            var cnt = document.getElementById("content"+idx);
+            var cnt = document.getElementById(e.id);
             cnt.style.left = e.left+"mm";
             cnt.style.top = e.top+"mm";
           })

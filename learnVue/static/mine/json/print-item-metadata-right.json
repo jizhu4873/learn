@@ -1,0 +1,358 @@
+{
+  "data": {
+    "content": [
+      {
+        "idx": "0",
+        "desc": "政府采购(GP)机票",
+        "left": 11.377083333333333,
+        "top": 22,
+        "val": "广州市委市政府",
+        "id": "gp",
+        "style": {
+          "font-family": "宋体",
+          "font-size":"13",
+          "color":"000000",
+          "font-weight":"bold"
+        }
+      },
+      {
+        "idx": "1",
+        "desc": "旅客姓名",
+        "left": 11.377083333333333,
+        "top": 19.579166666666666,
+        "val": "吴锋",
+        "id": "psgName",
+        "style": {
+          "font-family": "宋体",
+          "font-size":"13",
+          "color":"000000",
+          "font-weight":"bold"
+        }
+      },
+      {
+        "idx": "2",
+        "left": 58.47291666666667,
+        "top": 19.84375,
+        "val": "371325198503040552",
+        "desc": "有效身份证证件号",
+        "id": "certificateId",
+        "style": {
+          "font-family": "宋体",
+          "font-size":"13",
+          "color":"000000",
+          "font-weight":"bold"
+        }
+      },
+      {
+        "idx": "3",
+        "left": 125.14791666666665,
+        "top": 19.579166666666666,
+        "val": "不得签转职优 15021003611",
+        "desc": "签注",
+        "id": "certificateId",
+        "style": {
+          "font-family": "宋体",
+          "font-size":"13",
+          "color":"000000",
+          "font-weight":"bold"
+        }
+      },
+      {
+        "idx": "4",
+        "left": 19.84375,
+        "top": 37.041666666666664,
+        "val": "广州/CAN",
+        "desc": "签注",
+        "id": "certificateId",
+        "style": {
+          "font-family": "宋体",
+          "font-size":"13",
+          "color":"000000",
+          "font-weight":"normal"
+        }
+      },
+      {
+        "idx": "5",
+        "left": 51.59375,
+        "top": 37.041666666666664,
+        "val": "CZ"
+      },
+      {
+        "idx": "6",
+        "left": 62.17708333333333,
+        "top": 37.041666666666664,
+        "val": "3533"
+      },
+      {
+        "idx": "6",
+        "left": 81.21693121693121,
+        "top": 45.76719576719577,
+        "val": "Z"
+      },
+      {
+        "idx": "7",
+        "left": 88.63541666666667,
+        "top": 37.041666666666664,
+        "val": "2015-02-16"
+      },
+      {
+        "idx": "8",
+        "left": 106.08465608465609,
+        "top": 37.56613756613757,
+        "val": "06:20"
+      },
+      {
+        "idx": "9",
+        "left": 121.97291666666665,
+        "top": 37.30625,
+        "val": "YID00R2"
+      },
+      {
+        "idx": "10",
+        "left": 192.35208333333333,
+        "top": 37.30625,
+        "val": "20K"
+      },
+      {
+        "idx": "11",
+        "left": 19.84375,
+        "top": 43.920833333333334,
+        "val": "青岛/TAO"
+      },
+      {
+        "idx": "12",
+        "left": 51.329166666666666,
+        "top": 43.920833333333334,
+        "val": "CZ"
+      },
+      {
+        "idx": "13",
+        "left": 62.17708333333333,
+        "top": 43.920833333333334,
+        "val": "3574"
+      },
+      {
+        "idx": "14",
+        "left": 79.63958333333332,
+        "top": 37.041666666666664,
+        "val": "Z"
+      },
+      {
+        "idx": "32",
+        "left": 169.33333333333334,
+        "top": 84.13749999999999,
+        "val": "2015-02-22"
+      },
+      {
+        "idx": "15",
+        "left": 88.37083333333332,
+        "top": 44.18541666666666,
+        "val": "YID00R2"
+      },
+      {
+        "idx": "16",
+        "left": 121.70833333333333,
+        "top": 44.18541666666666,
+        "val": "20K"
+      },
+      {
+        "idx": "17",
+        "left": 192.35208333333333,
+        "top": 44.18541666666666,
+        "val": "广州/CAN"
+      },
+      {
+        "idx": "18",
+        "left": 19.84375,
+        "top": 52.65208333333333,
+        "val": "VOID"
+      },
+      {
+        "idx": "19",
+        "left": 61.912499999999994,
+        "top": 52.65208333333333,
+        "val": "VOID"
+      },
+      {
+        "idx": "20",
+        "left": 19.84375,
+        "top": 61.383333333333326,
+        "val": "VOID"
+      },
+      {
+        "idx": "21",
+        "left": 61.912499999999994,
+        "top": 61.383333333333326,
+        "val": "VOID"
+      },
+      {
+        "idx": "22",
+        "left": 19.579166666666666,
+        "top": 68.2625,
+        "val": "CNY 0.0",
+        "desc": "票价",
+        "id": "farePrice",
+        "style": {
+          "font-family": "宋体",
+          "font-size":"13",
+          "color":"000000",
+          "font-weight":"normal"
+        }
+      },
+      {
+        "idx": "23",
+        "left": 51.329166666666666,
+        "top": 68.2625,
+        "val": "CNY 100.0",
+        "desc": "机场建设费",
+        "id": "airportTax",
+        "style": {
+          "font-family": "宋体",
+          "font-size":"13",
+          "color":"000000",
+          "font-weight":"normal"
+        }
+      },
+      {
+        "idx": "24",
+        "left": 77.7875,
+        "top": 68.2625,
+        "val": "CNY 0.0",
+        "desc": "燃油附加费",
+        "id": "fuelTax",
+        "style": {
+          "font-family": "宋体",
+          "font-size":"13",
+          "color":"000000",
+          "font-weight":"normal"
+        }
+      },
+      {
+        "idx": "25",
+        "left": 103.98124999999999,
+        "top": 68.2625,
+        "val": "CNY",
+        "desc": "其他税费",
+        "id": "otherTax",
+        "style": {
+          "font-family": "宋体",
+          "font-size":"13",
+          "color":"000000",
+          "font-weight":"normal"
+        }
+      },
+      {
+        "idx": "26",
+        "left": 132.29166666666666,
+        "top": 68.2625,
+        "val": "CNY 100.0",
+        "desc": "合计 TOTAL",
+        "id": "totalPrice",
+        "style": {
+          "font-family": "宋体",
+          "font-size":"13",
+          "color":"000000",
+          "font-weight":"normal"
+        }
+      },
+      {
+        "idx": "27",
+        "left": 159.01458333333332,
+        "top": 68.2625,
+        "val": "784-2108909098",
+        "desc": "电子客票号码",
+        "id": "ticketNum",
+        "style": {
+          "font-family": "宋体",
+          "font-size":"13",
+          "color":"000000",
+          "font-weight":"normal"
+        }
+      },
+      {
+        "idx": "28",
+        "left": 23.28333333333333,
+        "top": 75.14166666666667,
+        "val": "0807",
+        "desc": "验证码",
+        "id": "validateCode",
+        "style": {
+          "font-family": "宋体",
+          "font-size":"13",
+          "color":"000000",
+          "font-weight":"normal"
+        }
+      },
+      {
+        "idx": "28",
+        "left": 40.28333333333333,
+        "top": 75.14166666666667,
+        "val": "54584561645",
+        "desc": "连续客票",
+        "id": "cknTkt",
+        "style": {
+          "font-family": "宋体",
+          "font-size":"13",
+          "color":"000000",
+          "font-weight":"normal"
+        }
+      },
+      {
+        "idx": "28",
+        "left":58.28333333333333,
+        "top": 75.14166666666667,
+        "val": "54584561645",
+        "desc": "保险费",
+        "id": "insuranceStr",
+        "style": {
+          "font-family": "宋体",
+          "font-size":"13",
+          "color":"000000",
+          "font-weight":"normal"
+        }
+      },
+      {
+        "idx": "28",
+        "left": 68.52708333333332,
+        "top": 77.52291666666666,
+        "val": "08678059",
+        "desc": "销售单位代号",
+        "id": "iataCode",
+        "style": {
+          "font-family": "宋体",
+          "font-size":"13",
+          "color":"000000",
+          "font-weight":"normal"
+        }
+      },
+      {
+        "idx": "30",
+        "left": 30.162499999999998,
+        "top": 83.87291666666667,
+        "val": "厦门市利航客货代理服务有限公司",
+        "desc": "填开单位（盖章）",
+        "id": "issuedBy",
+        "style": {
+          "font-family": "宋体",
+          "font-size":"13",
+          "color":"000000",
+          "font-weight":"normal"
+        }
+      },
+      {
+        "idx": "31",
+        "left": 79.63958333333332,
+        "top": 83.87291666666667,
+        "val": "2015-02-10",
+        "desc": "填开日期",
+        "id": "dateOfIssue",
+        "style": {
+          "font-family": "宋体",
+          "font-size":"13",
+          "color":"000000",
+          "font-weight":"normal"
+        }
+      }
+    ]
+  }
+}

@@ -1,13 +1,10 @@
 --[[ngx.sleep(1)]]
 
---[[
-ngx.req.set_header("Connection", "close")
-ngx.say("hello world")
-ngx.say(ngx.worker.pid())]]
-require("resty.core");
+
+--[[require("resty.core");
 local mobdebug = require("debug.mobdebug");
-mobdebug.start();
+mobdebug.start();]]
 
 local str = "hello"
-+
+ngx.header.hello='world'
 ngx.say(str)
