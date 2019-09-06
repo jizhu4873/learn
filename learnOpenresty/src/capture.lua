@@ -19,6 +19,7 @@ function print_table(table)
 end
 
 
+--[[
 ngx.req.set_header("Foo", {"Bar","ZWM"})
 ngx.req.set_header("User-Agent",nil)
 
@@ -28,4 +29,8 @@ if res.status == ngx.HTTP_OK then
     ngx.say(res.body)
 else
     ngx.exit(res.status)
-end
+end]]
+local var = ngx.req.read_body()
+local res = ngx.location.capture('/app/sub-capture')
+
+ngx.say(res.body)

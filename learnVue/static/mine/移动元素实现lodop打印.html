@@ -18,16 +18,17 @@
       border: 1px solid rgba(137, 103, 73, 0.45);
       /* 210*101mm -> 792*380px */
       width: 210mm;
-      height: 101mm;
+      height: 150mm;
       margin: 5px 0px;
     }
     #printContent{
       width: 210mm;
-      height: 101mm;
+      height: 150mm;
       margin: 0;
       position: relative;
-      background-image: url(./images/new-splitted.jpg);
-      background-size: 100% 100%;
+      background-image: url(./images/new-splitted-with-bottom.jpg);
+      background-size: 210mm 150mm;
+      background-repeat:no-repeat;
     }
 
     #printContent span {
@@ -40,7 +41,7 @@
     }
 
     .topBox{
-      width: 210mm;
+      width: 220mm;
       margin: 0px auto;
       height: 38px;
     }
@@ -71,6 +72,7 @@
       padding: 10px;
     }
     #verticalSlider {
+      width: 13mm;
     }
     .switchContainer{
       margin: 0 auto;
@@ -93,7 +95,7 @@
 
     /*动画过渡*/
     .fade-enter-active, .fade-leave-active {
-      transition: opacity 1.8s;
+      transition: opacity 2.8s;
     }
     .fade-enter, .fade-leave-to {
       opacity: 0;
@@ -104,27 +106,29 @@
 <div id="app">
   <div class="topBox">
     <transition name="fade">
-    <div v-show="sliderSwitch" id="horizonSlider">
-      <el-slider v-model="movePrintPaperHorizon" :min="-200" :max="300" style="width: 100%;margin-right: 20px;"></el-slider>
-    </div>
+      <div v-show="sliderSwitch" id="horizonSlider">
+        <el-slider v-model="movePrintPaperHorizon" :min="-200" :max="300" style="width: 100%;margin-right: 20px;"></el-slider>
+      </div>
     </transition>
   </div>
   <div class="mainBox">
-    <transition name="fade">
-      <div v-show="sliderSwitch" id="verticalSlider">
-      <el-slider v-model="movePrintPaperVertical" vertical height="380px" :min="-300" :max="500"></el-slider>
+
+
+    <div  id="verticalSlider">
+      <transition name="fade">
+        <el-slider v-show="sliderSwitch" v-model="movePrintPaperVertical" vertical height="150mm" :min="-300" :max="500"></el-slider>
+      </transition>
     </div>
-    </transition>
     <div id="content" @mouseup="end" v-show="dataMounted">
-    <div id="printBox">
-      <div id="printContent">
-          <span v-for="(item,idx) in list" :id="item.id" :key="item.id" @mousedown="down(item.id)"
-                @mousemove.capture="move(item.id)"
-                :style="item.style">
-              {{item.val}}
-          </span>
+      <div id="printBox">
+        <div id="printContent">
+            <span v-for="(item,idx) in list" :id="item.id" :key="item.id" @mousedown="down(item.id)"
+                  @mousemove.capture="move(item.id)"
+                  :style="item.style">
+                {{item.val}}
+            </span>
+        </div>
       </div>
-    </div>
   </div>
   </div>
   <div class="bottomBox">
@@ -231,9 +235,11 @@
       end(){
         this.flags = false;
       },
-      getData(){ //远程获取打印元素初始状态值
-        let url = "json/print-item-metadata-right.json";
-        axios.get(url).then(r=>this.list = r.data.data.content)
+      //同步处理
+      async getData() { //远程获取打印元素初始状态值
+        let url = "https://www.easy-mock.com/mock/5d09930224add5128091e046/example/lodop/printData";
+        //url = "json/print-item-metadata-right.json";
+        await axios.get(url).then(r => this.list = r.data.data.content)
       },
       getDPI(){
         var arrDPI = new Array;
@@ -262,7 +268,6 @@
       }
     },
     mounted(){
-      //异步化
         setTimeout(()=>{
           this.list.forEach((e,idx)=>{
             var cnt = document.getElementById(e.id);
@@ -270,7 +275,7 @@
             cnt.style.top = e.top+"mm";
           })
           this.dataMounted=true;
-        },200)
+        },800)
 
     },
     created() {
