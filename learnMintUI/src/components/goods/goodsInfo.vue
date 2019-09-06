@@ -1,5 +1,6 @@
 <template>
     <div class="goods-container">
+        <lunbo :lunbos="lunbos"></lunbo>
 
         <div class="mui-card">
             <div class="mui-card-content">
@@ -37,8 +38,34 @@
 </template>
 
 <script>
+    import lunbo from "../subcomponent/lunbotu.vue"
     export default {
-        name: "goodsInfo"
+        name: "goodsInfo",
+        data(){
+            return {
+                id:this.$route.params.id,
+                lunbos:[]
+            }
+        },
+        components:{
+          lunbo
+        },
+        methods:{
+            getLunbo(){
+                this.$axios
+                    .get('/goods/lunbotu/'+this.id)
+                    .then(res => {
+                        res.data.data.forEach(e=>e.img=e.src)
+                        this.lunbos=res.data.data
+                    })
+                    .catch(function (error) {
+                        console.log(error);
+                    });
+            }
+        },
+        created() {
+            this.getLunbo()
+        }
     }
 </script>
 

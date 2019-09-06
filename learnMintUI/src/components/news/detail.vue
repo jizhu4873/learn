@@ -12,7 +12,7 @@
 </template>
 
 <script>
-    import comment from "../comment/comment.vue"
+    import comment from "../subcomponent/comment.vue"
 
     export default {
         name: "detail",

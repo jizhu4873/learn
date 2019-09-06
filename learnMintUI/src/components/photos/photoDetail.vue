@@ -18,7 +18,7 @@
 
 <script>
     import {Toast} from "mint-ui"
-    import comment from "../../components/comment/comment.vue"
+    import comment from "../subcomponent/comment.vue"
     export default {
         name: "photoDetail",
         components:{

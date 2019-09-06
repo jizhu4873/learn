@@ -1,11 +1,7 @@
 <template>
    <div>
        <!--轮播图-->
-       <mt-swipe :auto="1000">
-           <mt-swipe-item v-for="item in lunbos" :key="item.img">
-               <img :src="item.img">
-           </mt-swipe-item>
-       </mt-swipe>
+        <lunbotu :lunbos="lunbos"></lunbotu>
 
        <!--六宫格-->
        <ul class="mui-table-view mui-grid-view mui-grid-9">
@@ -40,8 +36,10 @@
 </template>
 
 <script>
+    import Lunbotu from "../subcomponent/lunbotu.vue";
     export default {
         name: "home",
+        components: {Lunbotu},
         data(){
             return {lunbos:[]}
         },
@@ -62,25 +60,6 @@
 </script>
 
 <style lang="scss" rel="stylesheet/scss" scoped>
-    .mint-swipe{
-        height: 200px;
-        .mint-swipe-item{
-            &:nth-child(1){
-                background-color: #94ff9d;
-            }
-            &:nth-child(2){
-                background-color: #b1ffd4;
-            }
-            &:nth-child(3){
-                background-color: #d7ff78;
-            }
-            img{
-                width: 100%;
-                height: 100%;
-            }
-        }
-    }
-
     .mui-grid-view.mui-grid-9{
         background-color:#fff;
         .mui-media-body{
