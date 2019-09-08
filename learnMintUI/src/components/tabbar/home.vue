@@ -1,7 +1,7 @@
 <template>
    <div>
        <!--轮播图-->
-        <lunbotu :lunbos="lunbos"></lunbotu>
+        <lunbotu :lunbos="lunbos" :is-full="true"></lunbotu>
 
        <!--六宫格-->
        <ul class="mui-table-view mui-grid-view mui-grid-9">

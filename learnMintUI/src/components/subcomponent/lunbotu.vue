@@ -2,7 +2,7 @@
     <div>
         <mt-swipe :auto="1000">
             <mt-swipe-item v-for="item in lunbos" :key="item.img">
-                <img :src="item.img">
+                <img :src="item.img" :class="{full:isFull}">
             </mt-swipe-item>
         </mt-swipe>
     </div>
@@ -11,25 +11,19 @@
 <script>
     export default {
         name: "lunbotu",
-        props:["lunbos"]
+        props:["lunbos","isFull"]
     }
 </script>
 
 <style scoped lang="scss">
+    .full{
+        width: 100%;
+    }
     .mint-swipe{
         height: 200px;
         .mint-swipe-item{
-            &:nth-child(1){
-                background-color: #94ff9d;
-            }
-            &:nth-child(2){
-                background-color: #b1ffd4;
-            }
-            &:nth-child(3){
-                background-color: #d7ff78;
-            }
+            text-align: center;
             img{
-                width: 100%;
                 height: 100%;
             }
         }
