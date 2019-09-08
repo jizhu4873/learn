@@ -4,53 +4,57 @@
 
         <div class="mui-card">
             <div class="mui-card-header">
-                商品标题
+                {{info.title}}
             </div>
             <div class="mui-card-content">
                 <div class="mui-card-content-inner">
                     <p class="price">
-                        市场价：<del>￥2899</del>&nbsp;&nbsp;<span>销售价：￥2699</span>
+                        市场价：<del>￥{{info.market_price}}</del>&nbsp;&nbsp;销售价：<span class="now-price">￥{{info.sell_price}}</span>
                     </p>
-                        购买数量：
-                    <div class="mui-numbox" data-numbox-min='1' data-numbox-max='9'>
-                        <button class="mui-btn mui-btn-numbox-minus" type="button">-</button>
-                        <input id="test" class="mui-input-numbox" type="number" value="5" />
-                        <button class="mui-btn mui-btn-numbox-plus" type="button">+</button>
-                    </div>
-                    <mt-button type="primary" size="small">立刻购买</mt-button>
-                    <mt-button type="danger" size="small">加入购物车</mt-button>
+                    <p>购买数量： <numbox></numbox></p>
+                    <p>
+                        <mt-button type="primary" size="small">立刻购买</mt-button>
+                        <mt-button type="danger" size="small">加入购物车</mt-button>
+                    </p>
                 </div>
             </div>
         </div>
 
         <div class="mui-card">
             <div class="mui-card-header">
-                页眉
+                商品参数
             </div>
 
             <div class="mui-card-content">
                 <div class="mui-card-content-inner">
-                    包含页眉页脚的卡片，页眉常用来显示面板标题，页脚用来显示额外信息或支持的操作（比如点赞、评论等）
+                    <p>商品货号：{{info.goods_no}}</p>
+                    <p>库存情况：{{info.stock_quantity}}</p>
+                    <p>上架时间：{{info.add_time}}</p>
                 </div>
             </div>
 
-            <div class="mui-card-footer">页脚</div>
+            <div class="mui-card-footer">
+                <mt-button type="primary"  size="large" plain>图文介绍</mt-button>
+                <mt-button type="danger" size="large" plain>商品评论</mt-button>
+            </div>
         </div>
     </div>
 </template>
 
 <script>
     import lunbo from "../subcomponent/lunbotu.vue"
+    import numbox from "../subcomponent/numbox.vue"
     export default {
         name: "goodsInfo",
         data(){
             return {
                 id:this.$route.params.id,
-                lunbos:[]
+                lunbos:[],
+                info:{}
             }
         },
         components:{
-          lunbo
+          lunbo, numbox
         },
         methods:{
             getLunbo(){
@@ -63,10 +67,18 @@
                     .catch(function (error) {
                         console.log(error);
                     });
+            },
+            getGoodsinfo(){
+                this.$axios.get("/goods/info/"+this.id).then(
+                    r=>{
+                        this.info=r.data.msg[0];
+                    }
+                )
             }
         },
         created() {
-            this.getLunbo()
+            this.getLunbo();
+            this.getGoodsinfo()
         }
     }
 </script>
@@ -75,5 +87,20 @@
     .goods-container{
         background-color: #eeeeee;
         overflow: hidden;
+        .mui-card-content-inner{
+            .price{
+                .now-price{
+                    color: red;
+                    font-weight: bold;
+                }
+            }
+        }
+        .mui-card-footer{
+            display: block;
+            button{
+                margin: 15px 0;
+            }
+        }
+
     }
 </style>
