@@ -1,0 +1,12 @@
+{
+  "name": "haanoo-print-travel",
+  "version": "1.0.1",
+  "description": "打印行程单(可以移动打印元素)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["haanoo-print-travel"],
+  "author": "haanoo",
+  "license": "ISC"
+}

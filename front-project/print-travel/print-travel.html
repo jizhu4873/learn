@@ -237,8 +237,8 @@
       },
       //同步处理
       async getData() { //远程获取打印元素初始状态值
-        let url = "https://www.easy-mock.com/mock/5d09930224add5128091e046/example/lodop/printData";
-        //url = "json/print-item-metadata-right.json";
+        //let url = "https://www.easy-mock.com/mock/5d09930224add5128091e046/example/lodop/printData";
+        let url = "json/print-item-metadata-right.json";
         await axios.get(url).then(r => this.list = r.data.data.content)
       },
       getDPI(){

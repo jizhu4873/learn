@@ -34,8 +34,8 @@
             </div>
 
             <div class="mui-card-footer">
-                <mt-button type="primary"  size="large" plain>图文介绍</mt-button>
-                <mt-button type="danger" size="large" plain>商品评论</mt-button>
+                <mt-button type="primary"  size="large" plain @click="goDesc">图文介绍</mt-button>
+                <mt-button type="danger" size="large" plain @click="goComm">商品评论</mt-button>
             </div>
         </div>
     </div>
@@ -74,6 +74,12 @@
                         this.info=r.data.msg[0];
                     }
                 )
+            },
+            goDesc(){
+                this.$router.push({name:"goodsDesc",params:{id:this.id}})
+            },
+            goComm(){
+                this.$router.push({name:"goodsComment",params:{id:this.id}})
             }
         },
         created() {

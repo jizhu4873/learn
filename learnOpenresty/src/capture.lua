@@ -31,6 +31,7 @@ else
     ngx.exit(res.status)
 end]]
 local var = ngx.req.read_body()
-local res = ngx.location.capture('/app/sub-capture')
+local data = ngx.req.get_body_data()
+local res = ngx.location.capture('/app/sub-capture',{body=data})
 
 ngx.say(res.body)
