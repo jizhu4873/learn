@@ -1,7 +1,7 @@
 <template>
     <div>
         <mt-swipe :auto="1000">
-            <mt-swipe-item v-for="item in lunbos" :key="item.img">
+            <mt-swipe-item v-for="item in lunbos" :key="item.id">
                 <img :src="item.img" :class="{full:isFull}">
             </mt-swipe-item>
         </mt-swipe>

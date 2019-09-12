@@ -23,7 +23,8 @@ Vue.use(VuePreview)
      return moment(dateStr).format(pattern)
  })
 
-axios.defaults.baseURL = 'https://www.easy-mock.com/mock/5d564a4f1344716accd8c58f';
+//axios.defaults.baseURL = 'https://www.easy-mock.com/mock/5d564a4f1344716accd8c58f';
+axios.defaults.baseURL = '/static/data/';
 Vue.prototype.$axios=axios
 
 var vm = new Vue({

@@ -1,5 +1,9 @@
 // 由于 webpack 是基于Node进行构建的，所有，webpack的配置文件中，任何合法的Node代码都是支持的
 var path = require('path')
+
+function  resolve(dir) {
+  return path.join(__dirname,'..',dir)
+}
 // 在内存中，根据指定的模板页面，生成一份内存中的首页，同时自动把打包好的bundle注入到页面底部
 // 如果要配置插件，需要在导出的对象中，挂载一个 plugins 节点
 var htmlWebpackPlugin = require('html-webpack-plugin')

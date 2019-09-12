@@ -33,6 +33,8 @@
 
     #printContent span {
       position: absolute;
+      word-break: break-all;
+
     }
   </style>
   <style>
@@ -181,7 +183,7 @@
         LODOP.ADD_PRINT_HTM(this.movePrintPaperVertical,this.movePrintPaperHorizon,"210mm","279mm",html);
         //LODOP.SET_PRINT_PAGESIZE(intOrient,intPageWidth,intPageHeight,strPageName);
         //1---纵向打印，固定纸张；
-        LODOP.SET_PRINT_PAGESIZE(1,0,0,"A4");
+        //LODOP.SET_PRINT_PAGESIZE(1,0,0,"A4");
         LODOP.PREVIEW();
       },
       down(id){

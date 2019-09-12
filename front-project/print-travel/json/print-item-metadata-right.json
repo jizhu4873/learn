@@ -2,23 +2,9 @@
   "data": {
     "content": [
       {
-        "idx": "0",
-        "desc": "政府采购(GP)机票",
-        "left": 11.377083333333333,
-        "top": 22,
-        "val": "广州市委市政府",
-        "id": "gp",
-        "style": {
-          "font-family": "宋体",
-          "font-size": "13",
-          "color": "000000",
-          "font-weight": "bold"
-        }
-      },
-      {
         "idx": "1",
-        "desc": "旅客姓名",
-        "left": 11.377083333333333,
+        "desc": "政府",
+        "left": 3,
         "top": 19.579166666666666,
         "val": "吴锋",
         "id": "psgName",
@@ -47,7 +33,7 @@
         "idx": "3",
         "left": 125.14791666666665,
         "top": 19.579166666666666,
-        "val": "不得签转职优 15021003611",
+
         "desc": "签注",
         "id": "endorsements",
         "style": {
@@ -934,7 +920,7 @@
         "id": "web",
         "style": {
           "font-family": "宋体",
-          "font-size": "11",
+          "font-size": "3.17mm",
           "color": "000000",
           "font-weight": "normal"
         }

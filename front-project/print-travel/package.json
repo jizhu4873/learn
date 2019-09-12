@@ -1,6 +1,6 @@
 {
   "name": "haanoo-print-travel",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "打印行程单(可以移动打印元素)",
   "main": "index.js",
   "scripts": {

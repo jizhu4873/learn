@@ -29,9 +29,11 @@ if res.status == ngx.HTTP_OK then
     ngx.say(res.body)
 else
     ngx.exit(res.status)
-end]]
+end
+
+]]
 local var = ngx.req.read_body()
 local data = ngx.req.get_body_data()
-local res = ngx.location.capture('/app/sub-capture',{body=data})
+local res = ngx.location.capture('/app/sub-capture?sex=male', { args = { name = "zwm", age = 31 } })
 
 ngx.say(res.body)

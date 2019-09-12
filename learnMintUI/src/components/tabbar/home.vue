@@ -41,13 +41,15 @@
         name: "home",
         components: {Lunbotu},
         data(){
-            return {lunbos:[]}
+            return {
+                lunbos:[]
+            }
         },
         methods:{
             getLunbo(){
                 this.$axios
-                    .get('/lunbo')
-                    .then(res => (this.lunbos=res.data.data))
+                    .get('lunbo.json')
+                    .then(res => {this.lunbos=res.data.msg})
                     .catch(function (error) {
                         console.log(error);
                     });
@@ -55,6 +57,7 @@
         },
         created() {
             this.getLunbo();
+            //this.lunbos=require("../../data/lunbo.json").msg
         }
     }
 </script>
