@@ -34,7 +34,8 @@
         },
         methods:{
             getComments(){
-                let url="/getComments/"+this.id+"?pageIndex="+this.pageIndex;
+                //let url="/getComments/"+this.id+"?pageIndex="+this.pageIndex;
+                let url="/getComments/_itemId.json?pageIndex="+this.pageIndex;
                 this.$axios.get(url).then(r=>{
                     this.comments=this.comments.concat(r.data.msg);
                 })
@@ -47,7 +48,8 @@
                 if(!this.comment){
                     return Toast("评论不能为空")
                 }
-                this.$axios.post("/postComment/"+this.$route.params.id,{content:this.comment}).then(r=>{
+                //this.$axios.post("/postComment/"+this.$route.params.id,{content:this.comment}).then(r=>{
+                this.$axios.get("/postComment/_itemId.json").then(r=>{
                     this.comments.unshift({"user_name":"匿名用户","add_time":Date.now(),"content":this.comment})
                 })
             }

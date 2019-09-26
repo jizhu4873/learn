@@ -1,12 +1,17 @@
 <template>
     <div class="comment-box">
-        商品评论
+        <comm :id="$route.params.id"></comm>
     </div>
 </template>
 
 <script>
+    import comm from "../subcomponent/comment.vue"
     export default {
-        name: "goodsComment"
+        name: "goodsComment",
+        components:{
+            comm
+        }
+
     }
 </script>
 

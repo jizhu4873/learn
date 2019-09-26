@@ -31,7 +31,7 @@
         },
         methods:{
             getGoodsList(){
-                this.$axios.get("/goodsList?pageIndex="+this.pageIndex).then(r=>{
+                this.$axios.get("/goodsList.json?pageIndex="+this.pageIndex).then(r=>{
                     if(r.data.status == "0"){
                         this.goodsList=this.goodsList.concat(r.data.msg);
                     }

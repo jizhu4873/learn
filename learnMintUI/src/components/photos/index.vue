@@ -47,13 +47,15 @@
         },
         methods:{
             getCates(){
-                this.$axios.get("/getPhotoCates").then(r=>{
+                this.$axios.get("/getPhotoCates.json").then(r=>{
+                //this.$axios.get("/getPhotoCates").then(r=>{
                     this.cates = r.data.msg
                     this.cates.unshift({id:"000",title:"全部"})
                 })
             },
             getPhotos(cateId){
-                this.$axios.get("/getPhotos/"+cateId).then(r=>{
+                this.$axios.get("/getPhotos/_cateId.json").then(r=>{
+                //this.$axios.get("/getPhotos/"+cateId).then(r=>{
                     this.list = r.data.msg
                 })
             }

@@ -25,7 +25,7 @@
         },
         methods:{
             getNews(){
-                this.$axios.get("/getNews")
+                this.$axios.get("/getNews.json")
                     .then(r=>{
                         this.news=r.data.msg
                     })

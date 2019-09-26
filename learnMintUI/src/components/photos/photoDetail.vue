@@ -50,7 +50,8 @@
         },
         methods:{
             getPhotoDetail(){
-                this.$axios.get("/getPhotoDetail/"+this.id).then(
+                //this.$axios.get("/getPhotoDetail/"+this.id).then(
+                this.$axios.get("/getPhotoDetail/_id.json").then(
                     r=>{
                         if(r.data.status==0)
                             this.photoDetail=r.data.msg[0]

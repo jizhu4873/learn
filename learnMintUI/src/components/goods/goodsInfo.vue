@@ -1,5 +1,12 @@
 <template>
     <div class="goods-container">
+        <transition
+        @before-enter="beforEnter"
+        @enter="enter"
+        @after-enter="afterEnter"
+        >
+            <div class="ball" v-show="showBall"></div>
+        </transition>
         <lunbo :lunbos="lunbos" :is-full="false"></lunbo>
 
         <div class="mui-card">
@@ -13,8 +20,8 @@
                     </p>
                     <p>购买数量： <numbox></numbox></p>
                     <p>
-                        <mt-button type="primary" size="small">立刻购买</mt-button>
-                        <mt-button type="danger" size="small">加入购物车</mt-button>
+                        <mt-button type="primary" size="small" >立刻购买</mt-button>
+                        <mt-button type="danger" size="small" @click="addCart()">加入购物车</mt-button>
                     </p>
                 </div>
             </div>
@@ -50,7 +57,8 @@
             return {
                 id:this.$route.params.id,
                 lunbos:[],
-                info:{}
+                info:{},
+                showBall:false
             }
         },
         components:{
@@ -59,17 +67,19 @@
         methods:{
             getLunbo(){
                 this.$axios
-                    .get('/goods/lunbotu/'+this.id)
+                    //.get('/goods/lunbotu/'+this.id)
+                    .get('/goods/lunbotu/_id.json')
                     .then(res => {
-                        res.data.data.forEach(e=>e.img=e.src)
-                        this.lunbos=res.data.data
+                        res.data.msg.forEach(e=>e.img=e.src)
+                        this.lunbos=res.data.msg
                     })
                     .catch(function (error) {
                         console.log(error);
                     });
             },
             getGoodsinfo(){
-                this.$axios.get("/goods/info/"+this.id).then(
+                //this.$axios.get("/goods/info/"+this.id).then(
+                this.$axios.get("/goods/info/_id.json").then(
                     r=>{
                         this.info=r.data.msg[0];
                     }
@@ -80,6 +90,20 @@
             },
             goComm(){
                 this.$router.push({name:"goodsComment",params:{id:this.id}})
+            },
+            addCart(){
+                this.showBall=!this.showBall;
+            },
+            beforEnter(e){
+                e.style.transform="translate(0,0)"
+            },
+            enter(e,done){
+                e.style.transform="translate(107px,231px)"
+                e.style.transition="all 3s cubic-bezier(.69,.43,.85,-0.17)"
+                done()
+            },
+            afterEnter(e){
+                this.showBall = !this.showBall
             }
         },
         created() {
@@ -91,7 +115,17 @@
 
 <style scoped lang="scss">
     .goods-container{
-        background-color: #eeeeee;
+        .ball{
+            background-color: red;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            z-index: 99;
+            position: absolute;
+            left: 153px;
+            top: 365px;
+        }
+        background-color: #eee;
         overflow: hidden;
         .mui-card-content-inner{
             .price{

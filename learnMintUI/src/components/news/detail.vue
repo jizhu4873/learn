@@ -27,7 +27,8 @@
         },
         methods:{
             getDetail(){
-                this.$axios.get("news/getDetail/"+this.id).then(r=>{
+                //this.$axios.get("news/getDetail/"+this.id).then(r=>{
+                this.$axios.get("news/getDetail/_id.json").then(r=>{
                     this.detail = r.data.msg[0]
                 })
             }
