@@ -5,7 +5,7 @@
         @enter="enter"
         @after-enter="afterEnter"
         >
-            <div class="ball" v-show="showBall"></div>
+            <div class="ball" v-show="showBall" ref="ball"></div>
         </transition>
         <lunbo :lunbos="lunbos" :is-full="false"></lunbo>
 
@@ -18,7 +18,7 @@
                     <p class="price">
                         市场价：<del>￥{{info.market_price}}</del>&nbsp;&nbsp;销售价：<span class="now-price">￥{{info.sell_price}}</span>
                     </p>
-                    <p>购买数量： <numbox></numbox></p>
+                    <p>购买数量： <numbox @getCount="getAddedCartNum" :maxCartNum="info.stock_quantity"></numbox></p>
                     <p>
                         <mt-button type="primary" size="small" >立刻购买</mt-button>
                         <mt-button type="danger" size="small" @click="addCart()">加入购物车</mt-button>
@@ -58,7 +58,8 @@
                 id:this.$route.params.id,
                 lunbos:[],
                 info:{},
-                showBall:false
+                showBall:false,
+                cartNum:1
             }
         },
         components:{
@@ -98,12 +99,22 @@
                 e.style.transform="translate(0,0)"
             },
             enter(e,done){
-                e.style.transform="translate(107px,231px)"
-                e.style.transition="all 3s cubic-bezier(.69,.43,.85,-0.17)"
+                e.offsetWidth
+                //小球初始位置
+                var ballPos = this.$refs.ball.getBoundingClientRect();
+                //购物车徽标的位置
+                var badgePos = document.getElementById("badge").getBoundingClientRect();
+                var leftDist = badgePos.left - ballPos.left
+                var topDist = badgePos.top-ballPos.top
+                e.style.transform=`translate(${leftDist}px,${topDist}231px)`
+                e.style.transition="all 1s cubic-bezier(.4,-0.3,.2,-0.68)"
                 done()
             },
             afterEnter(e){
                 this.showBall = !this.showBall
+            },
+            getAddedCartNum(cnt){
+                this.cartNum=cnt;
             }
         },
         created() {
