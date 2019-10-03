@@ -12,9 +12,9 @@ import "./lib/mui/css/icons-extra.css"
 import 'mint-ui/lib/style.css'
 
 import app from "./App.vue"
+import Vuex from "vuex"
 
-
-
+Vue.use(Vuex)
 Vue.use(VueRouter)
 Vue.use(MintUI)
 Vue.use(VuePreview)
@@ -27,8 +27,32 @@ Vue.use(VuePreview)
 axios.defaults.baseURL = '/static/data/';
 Vue.prototype.$axios=axios
 
+
+var store = Vuex.Store({
+    state:{
+        cart:[]
+    },
+    mutations:{
+        addCart(state,good){
+            var flag = false
+            state.cart.some(item=>{
+                if(good.id==item.id){
+                    flag = true
+                    item.count += item.count
+                }
+                if(!flag){
+                    state.cart.push(good)
+                }
+            })
+        }
+    },
+    getters:{
+
+    }
+})
 var vm = new Vue({
     el:"#app",
     render:r=>r(app),
-    router
+    router,
+    store
 })

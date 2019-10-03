@@ -94,6 +94,12 @@
             },
             addCart(){
                 this.showBall=!this.showBall;
+                this.$store.commit("addCart",{
+                    id:this.id,
+                    count:this.cartNum,
+                    price:this.info.sell_price,
+                    selected:true
+                })
             },
             beforEnter(e){
                 e.style.transform="translate(0,0)"
