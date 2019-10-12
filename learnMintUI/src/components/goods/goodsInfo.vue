@@ -96,7 +96,7 @@
                 this.showBall=!this.showBall;
                 this.$store.commit("addCart",{
                     id:this.id,
-                    count:this.cartNum,
+                    count:parseInt(this.cartNum),
                     price:this.info.sell_price,
                     selected:true
                 })
@@ -120,7 +120,7 @@
                 this.showBall = !this.showBall
             },
             getAddedCartNum(cnt){
-                this.cartNum=cnt;
+                this.cartNum=parseInt(cnt);
             }
         },
         created() {

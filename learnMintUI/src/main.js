@@ -27,10 +27,10 @@ Vue.use(VuePreview)
 axios.defaults.baseURL = '/static/data/';
 Vue.prototype.$axios=axios
 
-
-var store = Vuex.Store({
+var cart = JSON.parse(localStorage.getItem("cart")|| "[]");
+var store = new Vuex.Store({
     state:{
-        cart:[]
+        cart:cart
     },
     mutations:{
         addCart(state,good){
@@ -38,16 +38,24 @@ var store = Vuex.Store({
             state.cart.some(item=>{
                 if(good.id==item.id){
                     flag = true
-                    item.count += item.count
-                }
-                if(!flag){
-                    state.cart.push(good)
+                    item.count += parseInt(good.count)
+                    return true
                 }
             })
+            if(!flag){
+                state.cart.push(good)
+            }
+            localStorage.setItem("cart",JSON.stringify(state.cart))
         }
     },
     getters:{
-
+        cartcnt(state){
+            let cnt = 0
+            state.cart.forEach(item=>{
+                cnt += parseInt(item.count)
+            })
+            return cnt
+        }
     }
 })
 var vm = new Vue({

@@ -1,0 +1,24 @@
+{
+  "status": 0,
+  "msg": [
+    {
+    "id": "1",
+      "cou": 1,
+    "title": "哈尔滨北方森林动物园:动物体验北方民俗“抢秋膘”",
+    "sell_price": 998,
+     "thumb_path": "https://hellorfimg.zcool.cn/provider_image/preview260/2236806949.jpg"
+    },{
+      "id": "2",
+      "cou": 1,
+      "title": "现在购买大冰箱 赶紧入手 只要685",
+      "sell_price": 685,
+      "thumb_path": "https://hellorfimg.zcool.cn/provider_image/preview260/2236806949.jpg"
+    },{
+      "id": "3",
+      "cou": 1,
+      "title": "手机大简介:动物体验北方民俗“抢秋膘”",
+      "sell_price": 365,
+      "thumb_path": "https://hellorfimg.zcool.cn/provider_image/preview260/2236806949.jpg"
+    }
+  ]
+}
