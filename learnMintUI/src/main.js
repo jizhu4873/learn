@@ -46,6 +46,33 @@ var store = new Vuex.Store({
                 state.cart.push(good)
             }
             localStorage.setItem("cart",JSON.stringify(state.cart))
+        },
+        updateCartNmu(state,good){
+            state.cart.some(item=>{
+                if(good.id==item.id){
+                    item.count = parseInt(good.count)
+                    return true
+                }
+            })
+            localStorage.setItem("cart",JSON.stringify(state.cart))
+        },
+        removeCart(state,id){
+            state.cart.some((item,index)=>{
+                if(id==item.id){
+                    state.cart.splice(index,1)
+                    return true
+                }
+            })
+            localStorage.setItem("cart",JSON.stringify(state.cart))
+        },
+        updateSelectedState(state,id){
+            state.cart.some((item,index)=>{
+                if(id==item.id){
+                    item.selected = !item.selected
+                    return true
+                }
+            })
+            localStorage.setItem("cart",JSON.stringify(state.cart))
         }
     },
     getters:{
@@ -55,6 +82,20 @@ var store = new Vuex.Store({
                 cnt += parseInt(item.count)
             })
             return cnt
+        },
+        cntById(state){
+           let obj = {}
+            state.cart.forEach(item=>{
+                obj[item.id] = item.count
+            })
+            return obj
+        },
+        getSelectedState(state){
+            let obj = {}
+            state.cart.forEach(item=>{
+                obj[item.id] = item.selected
+            })
+            return obj
         }
     }
 })
