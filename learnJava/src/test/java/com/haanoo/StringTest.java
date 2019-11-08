@@ -6,6 +6,6 @@ public class StringTest {
 
     @Test
     public void htmlCharLenth(){
-        System.out.println("<br/>".length());
+        System.out.println("hello ".length());
     }
 }
