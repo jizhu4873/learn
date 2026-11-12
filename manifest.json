@@ -1,8 +1,8 @@
 {
-  "original_name": "test.tgz",
-  "total_parts": 18,
+  "original_name": "fission-ai-openspec-2.0.0.tgz",
+  "total_parts": 70,
   "encoding": "base64",
   "part_size": 50000,
-  "original_size": 648627,
-  "sha256": "f344f717e50b91d741d734fb15a0cd49c6d3d41471c4b59f22abbd5645c2f253"
+  "original_size": 2609951,
+  "sha256": "b0272949a3e5391dd319cd90396b2e752744a48a51436bcc2692f85b72ccec25"
 }
