@@ -1,8 +1,8 @@
 {
-  "original_name": "fission-ai-openspec-2.0.0.tgz",
-  "total_parts": 70,
+  "original_name": "voice2.zip",
+  "total_parts": 587,
   "encoding": "base64",
-  "part_size": 50000,
-  "original_size": 2609951,
-  "sha256": "b0272949a3e5391dd319cd90396b2e752744a48a51436bcc2692f85b72ccec25"
+  "part_size": 4000000,
+  "original_size": 1760680277,
+  "sha256": "5b9034a987edc34c477706660f5a827280e1e32f3e9e61aa583fe9736ddcd68c"
 }
