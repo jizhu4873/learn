@@ -1,8 +1,14 @@
 {
+  "version": 2,
+  "layout": "foldered",
   "original_name": "voice2.zip",
-  "total_parts": 587,
+  "total_parts": 46952,
   "encoding": "base64",
-  "part_size": 4000000,
+  "part_size": 50000,
+  "max_part_size": 50000,
+  "files_per_folder": 100,
+  "folder_digits": 4,
+  "part_digits": 5,
   "original_size": 1760680277,
   "sha256": "5b9034a987edc34c477706660f5a827280e1e32f3e9e61aa583fe9736ddcd68c"
 }
